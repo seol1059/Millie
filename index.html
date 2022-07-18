@@ -74,12 +74,32 @@
   align-items: center; flex-direction: column;
     justify-content: space-evenly;}
 .banner_wraper { height: 300px; width: 100%; margin: 0 auto; 
-  overflow: hidden; display: flex; }
-.banner_wraper img { height: 300px; width: 500px; position: absolute;  display: flex; }
+  overflow: hidden; display: flex; 
+  }
+
+.banner_wraper img { height: 300px; width: 500px; position: absolute;  display: flex; 
+    animation: mymove 5s infinite;  animation-timing-function: linear; }
+
+.banner_wraper img:nth-last-of-type(2) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+.banner_wraper img:nth-last-of-type(3) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+.banner_wraper img:nth-last-of-type(4) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+.banner_wraper img:nth-last-of-type(5) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+.banner_wraper img:nth-last-of-type(6) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+.banner_wraper img:nth-last-of-type(7) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+.banner_wraper img:nth-last-of-type(8) {animation: mymove 5s infinite;  animation-timing-function: linear;}
+
+ @keyframes mymove {
+ from {left: 0px;}
+  to {left: 2000px;}
+}
+
 
 .banner_wraper2 { height: 300px; width: 100%; margin: 0 auto; 
   overflow: hidden; display: flex; }
 .banner_wraper2 img { height: 300px; width: 500px; position: absolute;  display: flex; }
+
+
+
 
 .banner_wraper3 { height: 300px; width: 100%; margin: 0 auto; 
   overflow: hidden; display: flex; }
@@ -160,66 +180,24 @@
     </div>
    </div>
 
-   <div id="clip">
+
+<div id="clip">
 
     <div class="banner_wraper">
-      <a href="#"><img src="img/70.png"></a>
-      <a href="#"><img src="img/200.jpg"></a>
-      <a href="#"><img src="img/201.jpg"></a>
-      <a href="#"><img src="img/203.jpg"></a>
-      <a href="#"><img src="img/204.jpg"></a>
-      <a href="#"><img src="img/205.jpg"> </a>
-      <a href="#"><img src="img/206.jpg"></a>
-      <a href="#"><img src="img/80.jpg"></a>
-      <a href="#"><img src="img/img (2).jpg"></a>
-      <a href="#"><img src="img/71.png"></a>
+        <a href="#"><img src="img/70.png"></a>
+        <a href="#"><img src="img/200.jpg"></a>
+        <a href="#"><img src="img/201.jpg"></a>
+        <a href="#"><img src="img/203.jpg"></a>
+        <a href="#"><img src="img/204.jpg"></a>
+        <a href="#"><img src="img/205.jpg"> </a>
+        <a href="#"><img src="img/206.jpg"></a>
+        <a href="#"><img src="img/80.jpg"></a>
+        <a href="#"><img src="img/img (2).jpg"></a>
+        <a href="#"><img src="img/71.png"></a>
     </div>
 
-    <script>
-            //client rolling banner
-    window.onload = function() {
-               var bannerLeft=0;
-               var first=1;
-               var last;
-               var imgCnt=0;
-               var $img = $(".banner_wraper img");
-               var $first;
-               var $last;
-    
-               $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
-                   $(this).css("left",bannerLeft);
-                   bannerLeft += $(this).width()+10;
-                   $(this).attr("id", "banner"+(++imgCnt));  // img에 id 속성 추가
-               });
-    
-               
-               if( imgCnt > 9){                //배너 9개 이상이면 이동시킴
-    
-    
-    
-                   last = imgCnt;
-    
-                   setInterval(function() {
-                       $img.each(function(){
-                           $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
-                       });
-                       $first = $("#banner"+first);
-                       $last = $("#banner"+last);
-                       if($first.position().left < -500) {    // 제일 앞에 배너 제일 뒤로 옮김
-                           $first.css("left", $last.position().left + $last.width()+5 );
-                           first++;
-                           last++;
-                           if(last > imgCnt) { last=1; }   
-                           if(first > imgCnt) { first=1; }
-                       }
-                   }, 10);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
-    
-    //깔끔하게 변경가능하다           
-    
-    }
-    
-    };
-    </script>
+
+
 
     <div class="banner_wraper2">
         <a href="#"><img src="img/70.png"></a>
@@ -232,55 +210,12 @@
         <a href="#"><img src="img/80.jpg"></a>
         <a href="#"><img src="img/img (2).jpg"></a>
         <a href="#"><img src="img/71.png"></a>
-      </div>
-
-      <script>
-        //client rolling banner
-window.onload = function() {
-           var banner2Left=0;
-           var first=1;
-           var last;
-           var imgCnt=0;
-           var $img = $(".banner_wraper2 img");
-           var $first;
-           var $last;
-
-           $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
-               $(this).css("left",bannerLeft);
-               banner2Left += $(this).width()+10;
-               $(this).attr("id", "banner2"+(++imgCnt));  // img에 id 속성 추가
-           });
-
-           
-           if( imgCnt > 9){                //배너 9개 이상이면 이동시킴
+    </div>
 
 
 
-               last = imgCnt;
 
-               setInterval(function() {
-                   $img.each(function(){
-                       $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
-                   });
-                   $first = $("#banner2"+first);
-                   $last = $("#banner2"+last);
-                   if($first.position().left < -500) {    // 제일 앞에 배너 제일 뒤로 옮김
-                       $first.css("left", $last.position().left + $last.width()+5 );
-                       first++;
-                       last++;
-                       if(last > imgCnt) { last=1; }   
-                       if(first > imgCnt) { first=1; }
-                   }
-               }, 10);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
-
-//깔끔하게 변경가능하다           
-
-}
-
-};
-</script>
-
-      <div class="banner_wraper3">
+    <div class="banner_wraper3">
         <a href="#"><img src="img/70.png"></a>
         <a href="#"><img src="img/200.jpg"></a>
         <a href="#"><img src="img/201.jpg"></a>
@@ -291,61 +226,10 @@ window.onload = function() {
         <a href="#"><img src="img/80.jpg"></a>
         <a href="#"><img src="img/img (2).jpg"></a>
         <a href="#"><img src="img/71.png"></a>
-      </div>
-   </div>
+    </div>
 
-   <script>
+</div>
 
-
-
-
-    
-
-    //client rolling banner
-    window.onload = function() {
-               var bannerLeft=0;
-               var first=1;
-               var last;
-               var imgCnt=0;
-               var $img = $(".banner_wraper3 img");
-               var $first;
-               var $last;
-    
-               $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
-                   $(this).css("left",bannerLeft);
-                   bannerLeft += $(this).width()+10;
-                   $(this).attr("id", "banner3"+(++imgCnt));  // img에 id 속성 추가
-               });
-    
-               
-               if( imgCnt > 9){                //배너 9개 이상이면 이동시킴
-    
-    
-    
-                   last = imgCnt;
-    
-                   setInterval(function() {
-                       $img.each(function(){
-                           $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
-                       });
-                       $first = $("#banner3"+first);
-                       $last = $("#banner3"+last);
-                       if($first.position().left < -500) {    // 제일 앞에 배너 제일 뒤로 옮김
-                           $first.css("left", $last.position().left + $last.width()+5 );
-                           first++;
-                           last++;
-                           if(last > imgCnt) { last=1; }   
-                           if(first > imgCnt) { first=1; }
-                       }
-                   }, 10);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
-    
-    //깔끔하게 변경가능하다           
-    
-    }
-    
-    };
-     
-       </script>
 
 
 
