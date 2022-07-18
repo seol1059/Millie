@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+@font-face {
+    font-family: 'EarlyFontDiary';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+          *{margin: 0 ; padding: 0;     font-family: 'IM_Hyemin-Bold';}
+          ul, ol, li {list-style: none;}
+          html,body {width: 100%; height: 100%;}
+          a {text-decoration: none; color: black;}
+          button {border: none;}
+
+
+ header {width: 100%; height: 70px; margin: 0 auto; background-color: #fff;
+         border-top: 1px solid #666; border-bottom: 1px solid #666; position: fixed;}
+
+ #headbg {width: 100%; height: 100%; margin: 0 auto;}
+ .head {width: 70px; height: 100%; float: left; margin: 0 auto;  padding-left: 20px;}
+ .head img {width: 100%; height: 100%; margin: 0 auto;}
+
+ .ad {width: 350px; height: 100%; float: right; margin: 0 auto; padding-right: 20px;
+       display: flex; flex-direction: row; justify-content: space-between;
+      align-items: center;}
+ .ad p {font-size: 18px;}
+ .ad a {font-size: 18px; width: 30%; height: 70%; text-align: center; 
+        background-color: #666; color: #fff; border-radius: 50%;
+       display: flex; align-items: center; justify-content: center;}
+
+ #slide {width: 100vw; height: 90%; background-image: url(img/slide.png);
+          background-size: cover; background-position: center;  display: flex; 
+          flex-direction: column; justify-content: space-evenly; align-items: center;} 
+
+ .sl {width: 75%; height: 500px; margin: 0 auto; float: left; display: flex; 
+       flex-direction: column; justify-content: center; align-items: flex-start;}
+ .sl p:nth-of-type(1) {font-size: 60px; font-weight: bold; color: red;}
+  .sl p:nth-of-type(2) {font-size: 40px;}
+
+  .de {width: 75%; height: 300px;  margin: 0 auto; float: left; display: flex;
+       flex-direction: row; justify-content: flex-start; align-items: center;}
+.de img {width: 100px; height: 40px; }
+ .de p {font-size: 20px; padding-left: 20px;}
+
+ #fixbg {width: 100%; height: 70px; margin: 0 auto; display: flex; position: fixed;}
+ .fix {width: 30%; height: 100%; margin: 0 auto; 
+        background-color: #666; border-radius: 60px; display: flex;}
+ .fix a {width: 100%; height: 100%; margin: 0 auto; color: #fff; 
+         display: flex; justify-content: center; align-items: center; }
+ .fix a b {font-weight: bold;}
+
+ #anfy {width: 100%; height: 400px; margin: 0 auto;}
+ .an {width: 1200px; height: 100%; margin: 0 auto; 
+    display: flex; flex-direction: column; justify-content: center;}
+.an p:nth-of-type(1) {text-align: center; font-size: 40px;}
+.an p:nth-of-type(2) {text-align: center; font-size: 25px; color: #666;}
+
+#clip {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex;
+  align-items: center; flex-direction: column;
+    justify-content: space-evenly;}
+.banner_wraper { height: 300px; width: 100%; margin: 0 auto; 
+  overflow: hidden; display: flex; }
+.banner_wraper img { height: 300px; width: 500px; position: absolute;  display: flex; }
+
+.banner_wraper2 { height: 300px; width: 100%; margin: 0 auto; 
+  overflow: hidden; display: flex; }
+.banner_wraper2 img { height: 300px; width: 500px; position: absolute;  display: flex; }
+
+.banner_wraper3 { height: 300px; width: 100%; margin: 0 auto; 
+  overflow: hidden; display: flex; }
+.banner_wraper3 img { height: 300px; width: 500px; position: absolute;  display: flex; }
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    
+    <header>
+     
+        <div id="headbg">
+    
+            <div class="head">
+                <a href="#"><img src="img/logo_b.jpg" alt="."></a>
+            </div>
+    
+            <div class="ad">
+                <p>기업문의</p>
+                <p>계정관리</p>
+                <a href="#">로그인</a>
+            </div>
+
+        </div>
+    
+    </header>
+
+    <div id="slide">
+
+        <div class="sl">
+
+            <p>당신의 일상을<br>
+                1밀리+</p>
+
+            <p>독서와 무제한 친해지리</p>
+
+        </div>
+
+        <div class="de">
+            <img src="img/logo_black.png" alt="">
+            <p>밀리의 서재</p>
+        </div>
+    </div>
+
+    <div id="fixbg">
+        <div class="fix">
+            <a href="#"><b>첫 달 무료</b>로 독서 시작하기</a>
+        </div>
+    </div>
+
+   <div id="anfy">
+    <div class="an">
+        <p>당신을 기다리는<br>
+           11만권의 도서</p>
+        <p><br>첫 달 무료 구독을 통해<br>
+          어떤 도서가 있는지 확인해보세요</p>
+    </div>
+   </div>
+
+   <div id="clip">
+
+    <div class="banner_wraper">
+      <a href="#"><img src="img/70.png"></a>
+      <a href="#"><img src="img/200.jpg"></a>
+      <a href="#"><img src="img/201.jpg"></a>
+      <a href="#"><img src="img/203.jpg"></a>
+      <a href="#"><img src="img/204.jpg"></a>
+      <a href="#"><img src="img/205.jpg"> </a>
+      <a href="#"><img src="img/206.jpg"></a>
+      <a href="#"><img src="img/80.jpg"></a>
+      <a href="#"><img src="img/img (2).jpg"></a>
+      <a href="#"><img src="img/71.png"></a>
+    </div>
+
+    <script>
+            //client rolling banner
+    window.onload = function() {
+               var bannerLeft=0;
+               var first=1;
+               var last;
+               var imgCnt=0;
+               var $img = $(".banner_wraper img");
+               var $first;
+               var $last;
+    
+               $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
+                   $(this).css("left",bannerLeft);
+                   bannerLeft += $(this).width()+10;
+                   $(this).attr("id", "banner"+(++imgCnt));  // img에 id 속성 추가
+               });
+    
+               
+               if( imgCnt > 9){                //배너 9개 이상이면 이동시킴
+    
+    
+    
+                   last = imgCnt;
+    
+                   setInterval(function() {
+                       $img.each(function(){
+                           $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
+                       });
+                       $first = $("#banner"+first);
+                       $last = $("#banner"+last);
+                       if($first.position().left < -500) {    // 제일 앞에 배너 제일 뒤로 옮김
+                           $first.css("left", $last.position().left + $last.width()+5 );
+                           first++;
+                           last++;
+                           if(last > imgCnt) { last=1; }   
+                           if(first > imgCnt) { first=1; }
+                       }
+                   }, 10);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
+    
+    //깔끔하게 변경가능하다           
+    
+    }
+    
+    };
+    </script>
+
+    <div class="banner_wraper2">
+        <a href="#"><img src="img/70.png"></a>
+        <a href="#"><img src="img/200.jpg"></a>
+        <a href="#"><img src="img/201.jpg"></a>
+        <a href="#"><img src="img/203.jpg"></a>
+        <a href="#"><img src="img/204.jpg"></a>
+        <a href="#"><img src="img/205.jpg"> </a>
+        <a href="#"><img src="img/206.jpg"></a>
+        <a href="#"><img src="img/80.jpg"></a>
+        <a href="#"><img src="img/img (2).jpg"></a>
+        <a href="#"><img src="img/71.png"></a>
+      </div>
+
+      <script>
+        //client rolling banner
+window.onload = function() {
+           var banner2Left=0;
+           var first=1;
+           var last;
+           var imgCnt=0;
+           var $img = $(".banner_wraper2 img");
+           var $first;
+           var $last;
+
+           $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
+               $(this).css("left",bannerLeft);
+               banner2Left += $(this).width()+10;
+               $(this).attr("id", "banner2"+(++imgCnt));  // img에 id 속성 추가
+           });
+
+           
+           if( imgCnt > 9){                //배너 9개 이상이면 이동시킴
+
+
+
+               last = imgCnt;
+
+               setInterval(function() {
+                   $img.each(function(){
+                       $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
+                   });
+                   $first = $("#banner2"+first);
+                   $last = $("#banner2"+last);
+                   if($first.position().left < -500) {    // 제일 앞에 배너 제일 뒤로 옮김
+                       $first.css("left", $last.position().left + $last.width()+5 );
+                       first++;
+                       last++;
+                       if(last > imgCnt) { last=1; }   
+                       if(first > imgCnt) { first=1; }
+                   }
+               }, 10);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
+
+//깔끔하게 변경가능하다           
+
+}
+
+};
+</script>
+
+      <div class="banner_wraper3">
+        <a href="#"><img src="img/70.png"></a>
+        <a href="#"><img src="img/200.jpg"></a>
+        <a href="#"><img src="img/201.jpg"></a>
+        <a href="#"><img src="img/203.jpg"></a>
+        <a href="#"><img src="img/204.jpg"></a>
+        <a href="#"><img src="img/205.jpg"> </a>
+        <a href="#"><img src="img/206.jpg"></a>
+        <a href="#"><img src="img/80.jpg"></a>
+        <a href="#"><img src="img/img (2).jpg"></a>
+        <a href="#"><img src="img/71.png"></a>
+      </div>
+   </div>
+
+   <script>
+
+
+
+
+    
+
+    //client rolling banner
+    window.onload = function() {
+               var bannerLeft=0;
+               var first=1;
+               var last;
+               var imgCnt=0;
+               var $img = $(".banner_wraper3 img");
+               var $first;
+               var $last;
+    
+               $img.each(function(){   // 5px 간격으로 배너 처음 위치 시킴
+                   $(this).css("left",bannerLeft);
+                   bannerLeft += $(this).width()+10;
+                   $(this).attr("id", "banner3"+(++imgCnt));  // img에 id 속성 추가
+               });
+    
+               
+               if( imgCnt > 9){                //배너 9개 이상이면 이동시킴
+    
+    
+    
+                   last = imgCnt;
+    
+                   setInterval(function() {
+                       $img.each(function(){
+                           $(this).css("left", $(this).position().left-1); // 1px씩 왼쪽으로 이동
+                       });
+                       $first = $("#banner3"+first);
+                       $last = $("#banner3"+last);
+                       if($first.position().left < -500) {    // 제일 앞에 배너 제일 뒤로 옮김
+                           $first.css("left", $last.position().left + $last.width()+5 );
+                           first++;
+                           last++;
+                           if(last > imgCnt) { last=1; }   
+                           if(first > imgCnt) { first=1; }
+                       }
+                   }, 10);   //여기 값을 조정하면 속도를 조정할 수 있다.(위에 1px 이동하는 부분도 조정하면 
+    
+    //깔끔하게 변경가능하다           
+    
+    }
+    
+    };
+     
+       </script>
+
+
+
+
+
+
+
+</body>
+</html>
