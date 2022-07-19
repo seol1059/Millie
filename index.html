@@ -39,9 +39,9 @@
  .ad {width: 350px; height: 100%; float: right; margin: 0 auto; padding-right: 20px;
        display: flex; flex-direction: row; justify-content: space-between;
       align-items: center;}
- .ad p {font-size: 18px;}
- .ad a {font-size: 18px; width: 30%; height: 70%; text-align: center; 
-        background-color: #666; color: #fff; border-radius: 50%;
+ .ad p {font-size: 16px;}
+ .ad a {font-size: 16px; width: 25%; height: 50%; text-align: center; 
+        background-color: #666; color: #fff; border-radius: 50px;
        display: flex; align-items: center; justify-content: center;}
 
  #slide {width: 100vw; height: 90%; background-image: url(img/slide200.png);
@@ -50,12 +50,12 @@
 
  .sl {width: 75%; height: 500px; margin: 0 auto; float: left; display: flex; 
        flex-direction: column; justify-content: center; align-items: flex-start;}
- .sl p:nth-of-type(1) {font-size: 60px; font-weight: bold; color: red;}
+ .sl p:nth-of-type(1) {font-size: 60px; font-weight: bold; color: black;}
   .sl p:nth-of-type(2) {font-size: 40px;}
 
-  .de {width: 75%; height: 300px;  margin: 0 auto; float: left; display: flex;
-       flex-direction: row; justify-content: flex-start; align-items: center;}
-.de img {width: 100px; height: 40px; }
+  .de {width: 75%; height: 34px; margin: 0 auto; float: left;
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-end;}
+.de img {width: 85px; height: 30px; }
  .de p {font-size: 20px; padding-left: 20px;}
 
  #fixbg {width: 100%; height: 70px; margin: 0 auto; display: flex; position: fixed; z-index: 50; }
@@ -219,44 +219,90 @@ display: flex;
  #sihibg {width: 1200px; height: 500px; margin: 0 auto;}
 .but {width: 35%; height: 100px; display: flex; justify-content: space-around;
     align-items: center;}
-.but a {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
+/* .but a {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
     border-radius: 50px; border: 1px solid #666;  display: flex; justify-content: space-around;
-    align-items: center;} 
+    align-items: center;}  */
+    .but button {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
+    border-radius: 50px; border: 1px solid #666;  display: flex; justify-content: space-around;
+    align-items: center;}
 
 .sihi1 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
     align-items: center;}
 .box5 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
 
-    .sihi2 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
-    align-items: center;}
+    .sihi2 {width: 100%; height: 400px; margin: 0 auto; display: none;
+        display: flex; justify-content: space-around;
+    align-items: center;
+}
 .box6 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
 
-    .sihi3 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
-    align-items: center;}
+    .sihi3 {width: 100%; height: 400px; margin: 0 auto; display: none;
+         display: flex; justify-content: space-around;
+    align-items: center;
+}
+
 .box7 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
 
-    .sihi4 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
-    align-items: center;}
+    .sihi4 {width: 100%; height: 400px; margin: 0 auto;  display: none;
+        display: flex; justify-content: space-around;
+    align-items: center;
+}
+
 .box8 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
 
-    .sihi5 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
-    align-items: center;}
+    .sihi5 {width: 100%; height: 400px; margin: 0 auto; display: none;
+        display: flex; justify-content: space-around;
+    align-items: center;
+}
+
 .box9 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
 
 
+#ekdtlsdl {width: 100%; height: 90%;  background-color: #f7f7f7;}
+
+.tt {width: 100%; height: 30%; margin: 0 auto; 
+    display: flex;  flex-direction: column;  justify-content: center; align-items: center;}
+    .tt p:nth-of-type(1) {text-align: center; font-size: 40px;}
+.tt p:nth-of-type(2) {text-align: center; font-size: 20px; color: #666;}
 
 
+.phon {width: 25%; height: 70%; margin: 0 auto; position: relative;}
+.phon img:nth-of-type(1) {width: 100%; height: 100%; }
+.phon img:nth-of-type(2) {   width: 94%; height: 25%; position: absolute; 
+    z-index: 1; top: 330px; left: 4px; }
+.phon img:nth-of-type(3) {     width: 35%; height: 28%; position: absolute;
+    z-index: 1; top: 388px; left: -300px;}
+.phon img:nth-of-type(4) {     width: 35%; height: 28%; position: absolute;
+    z-index: 1; top: 100px; left: -200px;}
+    .phon img:nth-of-type(5) {     width: 35%; height: 28%; position: absolute;
+    z-index: 1; top: 388px; right: -300px;}
+.phon img:nth-of-type(6) {     width: 35%; height: 28%; position: absolute;
+    z-index: 1; top: 100px; right: -200px;}
 
 
+#djswpemsbg {width: 100%; height: 800px; margin: 0 auto;     background-color: #ffeb60;}
 
+.djswpems {width: 1200px; height: 40%; margin: 0 auto; }
+.dj1 {width: 100%; height: 100%; margin:  0 auto; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;}
+.dj1 p:nth-of-type(1) {text-align: center; font-size: 40px;}
+.dj1 p:nth-of-type(2) {text-align: center; font-size: 20px; color: #666;}
 
+.dj2 {width: 100%; height: 60%; margin: 0 auto; display: flex;} 
 
-
+.dj2_1 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
+     border-radius: 20px;   box-shadow: 10px 10px 40px rgb(0 0 0 / 10%); display: flex; 
+     flex-direction: column; justify-content: space-evenly; align-items: center; position: relative;}
+     .dj2_1 img {width: 80px; height: 40px; position: absolute; top: 130px; left: 10px; }  
+ .dj2_2 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
+     border-radius: 20px;   box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);}
+ .dj2_3 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
+     border-radius: 20px;}
 
 
 
@@ -485,12 +531,149 @@ display: flex;
 
 <div id="sihibg">
     <div class="but">
-        <a href="#">주식</a>
-        <a href="#">영어</a>
-        <a href="#">고전</a>
-        <a href="#">인테리어</a>
-        <a href="#">다이어트</a>
+        <button  type="button"  class="btn11" id="btn11">주식</button> 
+        <button  type="button" class="btn12" id="btn12">영어</button>
+        <button type="button"  class="btn13" id="btn13">고전</button>
+        <button  type="button" class="btn14" id="btn14">인테리어</button>
+        <button type="button"  class="btn15" id="btn15">다이어트</button>
     </div>
+
+    <script>
+
+           $(document).ready(function(){
+            btn11.style.backgroundColor="#666";
+            btn11.style.color="white";
+               
+    });
+
+        this.onclick=function (e){
+        
+        if(e.target.id=="btn11"){btn11.style.backgroundColor="#666";
+        btn11.style.color="white";
+        
+            btn12.style.backgroundColor = "white";
+            btn12.style.color = "#666";
+            btn13.style.backgroundColor = "white";
+            btn13.style.color = "#666";
+            btn14.style.backgroundColor = "white";
+            btn14.style.color = "#666";
+            btn15.style.backgroundColor = "white";
+            btn15.style.color = "#666";}
+        
+        if(e.target.id=="btn12"){btn12.style.backgroundColor="#666";
+        btn12.style.color="white";
+        
+        btn11.style.backgroundColor="white";
+        btn11.style.color="#666";
+        btn13.style.backgroundColor="white";
+        btn13.style.color="#666";
+        btn14.style.backgroundColor="white";
+        btn14.style.color="#666";
+        btn15.style.backgroundColor="white";
+    btn15.style.color="#666";}
+        
+        if(e.target.id=="btn13"){btn13.style.backgroundColor="#666";
+        btn13.style.color="white";
+        
+        btn11.style.backgroundColor="white";
+        btn11.style.color="#666";
+        btn12.style.backgroundColor="white";
+        btn12.style.color="#666";
+        btn14.style.backgroundColor="white";
+        btn14.style.color="#666";
+        btn15.style.backgroundColor="white";
+    btn15.style.color="#666";}
+
+        if(e.target.id=="btn14"){btn14.style.backgroundColor="#666";
+        btn14.style.color="white";
+        
+        btn11.style.backgroundColor="white";
+        btn11.style.color="#666";
+        btn13.style.backgroundColor="white";
+        btn13.style.color="#666";
+        btn12.style.backgroundColor="white";
+        btn12.style.color="#666";
+        btn15.style.backgroundColor="white";
+    btn15.style.color="#666";}
+
+        if(e.target.id=="btn15"){btn15.style.backgroundColor="#666";
+        btn15.style.color="white";
+        
+        btn11.style.backgroundColor="white";
+        btn11.style.color="#666";
+        btn13.style.backgroundColor="white";
+        btn13.style.color="#666";
+        btn14.style.backgroundColor="white";
+        btn14.style.color="#666";
+        btn12.style.backgroundColor="white";
+    btn12.style.color="#666";}
+        
+        }
+        
+        </script>
+
+ 
+    
+<script>
+
+    $(document).ready(function(){
+        $(".sihi1").fadeIn();
+                $(".sihi2").hide();
+                $(".sihi3").hide();
+                $(".sihi4").hide();
+                $(".sihi5").hide();
+    });
+    
+    
+        $(function() {
+            $('button:nth-of-type(1) ').click(function() {
+                $(".sihi1").fadeIn();
+                $(".sihi2").hide();
+                $(".sihi3").hide();
+                $(".sihi4").hide();
+                $(".sihi5").hide();
+            
+            });
+    
+    
+            $('button:nth-of-type(2) ').click(function() {
+                $(".sihi2").fadeIn();
+                $(".sihi1").hide();
+                $(".sihi3").hide();
+                $(".sihi4").hide();
+                $(".sihi5").hide();
+            });
+    
+    
+            $('button:nth-of-type(3) ').click(function() {
+                $(".sihi3").fadeIn();
+                $(".sihi1").hide();
+                $(".sihi2").hide();
+                $(".sihi4").hide();
+                $(".sihi5").hide();
+            });
+    
+            $('button:nth-of-type(4) ').click(function() {
+                $(".sihi4").fadeIn();
+                $(".sihi1").hide();
+                $(".sihi2").hide();
+                $(".sihi3").hide();
+                $(".sihi5").hide();
+            });
+    
+            $('button:nth-of-type(5) ').click(function() {
+                $(".sihi5").fadeIn();
+                $(".sihi1").hide();
+                $(".sihi2").hide();
+                $(".sihi3").hide();
+                $(".sihi4").hide();
+            });
+    
+    
+    
+    
+        });
+    </script>
 
     <div class="sihi1">
 
@@ -649,6 +832,72 @@ display: flex;
 
 </div>
 
+<div id="ekdtlsdl">
+
+    <div class="tt">
+        <p>당신이 끝까지 읽을 책을<br>
+        알려주는 완독자 수</p><br>
+        <p>350만 밀리 회원이 먼저 읽고<br>
+            다 읽을 확률과 예상 시간을 알려드려요</p>
+    </div>
+
+    <div class="phon">
+        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-mock.3691c0a919be9925e90a19a17794050e.png" alt="">
+        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-tooltip.af41ece6e348d4b800680256f27a9892.png" alt="">
+
+        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card01.a091cde3f19afee102558704e82eefe6.png" alt="">
+        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card02.f1d517fe9b18dc4a7fcdd58f7f57afbe.png" alt="">
+        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card03.099696781998fdcfbc88f69f81ddd990.png" alt="">
+        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card04.178fde7cba62b12c0e4c5ef28fa01528.png" alt="">
+
+    </div>
+
+</div>
+
+<div id="djswpemsbg">
+
+    <div class="djswpems">
+
+        <div class="dj1">
+            <p>언제든 해지 가능!<br>
+                첫 달 무료로 가볍게</p><br>
+            <p>상황에 맞게 원하는 요금제를<br>
+                자유롭게 선택하세요</p>
+        </div>
+
+        <div class="dj2">
+
+            <div class="dj2_1">
+                <p>전자책 정기구독</p>
+                <p>월 <b>9,900</b>원</p>
+                <p><strike>118,800</strike></p>
+                <p>연 <b>99,900</b>원</p> 
+                <p>밀리에서 제공하는 콘텐츠를 무제한으로</p>
+
+                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount.8f423f8b2d39ebc92448a033200683ab.png" alt="">
+            </div>
+
+            <div class="dj2_2">
+                <p>종이책 정기구독</p>
+                <p>월 <b>15,900</b>원</p>
+                <p><strike>202,800</strike></p>
+                <p>연 <b>183,000</b>원</p> 
+                <p>밀리의 모든 콘텐츠를 무제한으로 보고<br>
+                    2달에 1번 종이책+전자책 배송까지</p>
+
+                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount02.1b7dc622a702906821e8c9bf6120c15a.png" alt="">
+            </div>
+
+
+            <div class="dj2_3"></div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
 
 
 
