@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>밀리의 서재</title>
+    <link rel="shortcut icon" href="img/stlogo.png">
 
     <style>
 
@@ -28,7 +29,7 @@
           button {border: none;}
 
 
- header {width: 100%; height: 70px; margin: 0 auto; background-color: #fff;
+ header {width: 100%; height: 70px; margin: 0 auto; background-color: #fff; z-index: 50;
          border-top: 1px solid #666; border-bottom: 1px solid #666; position: fixed;}
 
  #headbg {width: 100%; height: 100%; margin: 0 auto;}
@@ -43,7 +44,7 @@
         background-color: #666; color: #fff; border-radius: 50%;
        display: flex; align-items: center; justify-content: center;}
 
- #slide {width: 100vw; height: 90%; background-image: url(img/slide.png);
+ #slide {width: 100vw; height: 90%; background-image: url(img/slide200.png);
           background-size: cover; background-position: center;  display: flex; 
           flex-direction: column; justify-content: space-evenly; align-items: center;} 
 
@@ -57,53 +58,204 @@
 .de img {width: 100px; height: 40px; }
  .de p {font-size: 20px; padding-left: 20px;}
 
- #fixbg {width: 100%; height: 70px; margin: 0 auto; display: flex; position: fixed;}
+ #fixbg {width: 100%; height: 70px; margin: 0 auto; display: flex; position: fixed; z-index: 50; }
  .fix {width: 30%; height: 100%; margin: 0 auto; 
-        background-color: #666; border-radius: 60px; display: flex;}
+        background-color: #666; border-radius: 60px; display: flex; box-shadow: 4px 4px 4px #666;}
  .fix a {width: 100%; height: 100%; margin: 0 auto; color: #fff; 
          display: flex; justify-content: center; align-items: center; }
  .fix a b {font-weight: bold;}
 
- #anfy {width: 100%; height: 400px; margin: 0 auto;}
+ #anfy {width: 100%; height: 250px; margin: 0 auto;}
  .an {width: 1200px; height: 100%; margin: 0 auto; 
-    display: flex; flex-direction: column; justify-content: center;}
+    display: flex; flex-direction: column; justify-content: flex-end;}
 .an p:nth-of-type(1) {text-align: center; font-size: 40px;}
 .an p:nth-of-type(2) {text-align: center; font-size: 25px; color: #666;}
 
-#clip {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex;
+#clip {width: 100%; height: 80%; margin: 0 auto;  display: flex;
   align-items: center; flex-direction: column;
     justify-content: space-evenly;}
-.banner_wraper { height: 300px; width: 100%; margin: 0 auto; 
-  overflow: hidden; display: flex; 
-  }
 
-.banner_wraper img { height: 300px; width: 500px; position: absolute;  display: flex; 
-    animation: mymove 5s infinite;  animation-timing-function: linear; }
 
-.banner_wraper img:nth-last-of-type(2) {animation: mymove 5s infinite;  animation-timing-function: linear;}
-.banner_wraper img:nth-last-of-type(3) {animation: mymove 5s infinite;  animation-timing-function: linear;}
-.banner_wraper img:nth-last-of-type(4) {animation: mymove 5s infinite;  animation-timing-function: linear;}
-.banner_wraper img:nth-last-of-type(5) {animation: mymove 5s infinite;  animation-timing-function: linear;}
-.banner_wraper img:nth-last-of-type(6) {animation: mymove 5s infinite;  animation-timing-function: linear;}
-.banner_wraper img:nth-last-of-type(7) {animation: mymove 5s infinite;  animation-timing-function: linear;}
-.banner_wraper img:nth-last-of-type(8) {animation: mymove 5s infinite;  animation-timing-function: linear;}
 
- @keyframes mymove {
- from {left: 0px;}
-  to {left: 2000px;}
+#clip .slide1{  height: 220px;
+    width: 100%;
+    background-image: url(img/slide1.png);
+  background-repeat: repeat-x;
+  background-size: 3000px;
+  -webkit-animation-name: slide_left;
+          animation-name: slide_left;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  margin-top: 50px;
+  background-size: contain;
+display: flex;}
+
+
+
+  #clip .slide2 {
+    height: 220px;
+    width: 100%;
+    background-image: url(img/slide2.png);
+  background-repeat: repeat-x;
+  background-size: 3000px;
+  -webkit-animation-name: slide_right;
+          animation-name: slide_right;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  margin-top: 50px;
+  background-size: contain;
+display: flex;
 }
 
 
-.banner_wraper2 { height: 300px; width: 100%; margin: 0 auto; 
-  overflow: hidden; display: flex; }
-.banner_wraper2 img { height: 300px; width: 500px; position: absolute;  display: flex; }
+#clip .slide3 {
+    height: 220px;
+    width: 100%;
+    background-image: url(img/slide3.png);
+  background-repeat: repeat-x;
+  background-size: 3000px;
+  -webkit-animation-name: slide_left;
+          animation-name: slide_left;
+  -webkit-animation-duration: 100s;
+          animation-duration: 100s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  margin-top: 50px;
+  background-size: contain;
+display: flex;
+}
+
+@-webkit-keyframes slide_left {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -3000px;
+  }
+}
+@keyframes slide_left {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -3000px;
+  }
+}
+@-webkit-keyframes slide_right {
+  from {
+    background-position: -3000px;
+  }
+  to {
+    background-position: 0px;
+  }
+}
+@keyframes slide_right {
+  from {
+    background-position: -3000px;
+  }
+  to {
+    background-position: 0px;
+  }
+}
+
+#anwpgks {width: 50%; height: 400px; margin: 0 auto; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;}
+#anwpgks p:nth-of-type(1) { font-size: 50px; font-weight: bold; color: black; }
+#anwpgks p:nth-of-type(2) { font-size: 30px;  color: #666;}
+
+.qp {width: 60%; height: 70px; margin: 0 auto; 
+    display: flex; flex-direction: column; justify-content: flex-end;} 
+
+#qptmxm {width: 1200px; height: 350px; margin: 0 auto; text-align: center;
+    display: flex; justify-content: space-evenly; flex-direction: row; align-items: center;}
+
+.box1 {    width: 100%;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;}
+
+
+ .qp2 {width: 60%; height: 70px; margin: 0 auto; display: flex;
+    flex-direction: column; justify-content: flex-end;} 
+
+#qptmxm2 {width: 1200px; height: 350px; margin: 0 auto; display: flex;
+    justify-content: space-evenly; flex-direction: row; align-items: center;}
+
+.box2 {    width: 100%; text-align: center;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+ .qp3 {width: 60%; height: 70px; margin: 0 auto; display: flex;
+    flex-direction: column; justify-content: flex-end;} 
+
+#qptmxm3 {width: 1200px; height: 350px; margin: 0 auto; display: flex; 
+    justify-content: space-evenly; flex-direction: row; align-items: center;}
+    
+.box3 {    width: 100%; display: flex;
+     flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+
+    .qp4 {width: 60%; height: 70px; margin: 0 auto; display: flex;
+    flex-direction: column; justify-content: flex-end;} 
+
+#qptmxm4 {width: 1200px; height: 350px; margin: 0 auto; display: flex; 
+    justify-content: space-evenly; flex-direction: row; align-items: center;}
+    
+.box4 {    width: 100%; display: flex; 
+    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+
+
+ #rhkstla { width: 70%; height: 400px; margin: 0 auto; display: flex; flex-direction: column;
+ align-items: center; justify-content: center; text-align: center;}
+ #rhkstla p:nth-of-type(1) { font-size: 50px; font-weight: bold; color: black; }
+ #rhkstla p:nth-of-type(2) { font-size: 20px;  color: #666;}
+
+ #sihibg {width: 1200px; height: 500px; margin: 0 auto;}
+.but {width: 35%; height: 100px; display: flex; justify-content: space-around;
+    align-items: center;}
+.but a {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
+    border-radius: 50px; border: 1px solid #666;  display: flex; justify-content: space-around;
+    align-items: center;} 
+
+.sihi1 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
+    align-items: center;}
+.box5 {    width: 100%; display: flex; 
+    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+
+    .sihi2 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
+    align-items: center;}
+.box6 {    width: 100%; display: flex; 
+    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+
+    .sihi3 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
+    align-items: center;}
+.box7 {    width: 100%; display: flex; 
+    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+
+    .sihi4 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
+    align-items: center;}
+.box8 {    width: 100%; display: flex; 
+    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+
+    .sihi5 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
+    align-items: center;}
+.box9 {    width: 100%; display: flex; 
+    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
 
 
 
 
-.banner_wraper3 { height: 300px; width: 100%; margin: 0 auto; 
-  overflow: hidden; display: flex; }
-.banner_wraper3 img { height: 300px; width: 500px; position: absolute;  display: flex; }
+
+
+
+
+
 
 
 
@@ -183,55 +335,319 @@
 
 <div id="clip">
 
-    <div class="banner_wraper">
-        <a href="#"><img src="img/70.png"></a>
-        <a href="#"><img src="img/200.jpg"></a>
-        <a href="#"><img src="img/201.jpg"></a>
-        <a href="#"><img src="img/203.jpg"></a>
-        <a href="#"><img src="img/204.jpg"></a>
-        <a href="#"><img src="img/205.jpg"> </a>
-        <a href="#"><img src="img/206.jpg"></a>
-        <a href="#"><img src="img/80.jpg"></a>
-        <a href="#"><img src="img/img (2).jpg"></a>
-        <a href="#"><img src="img/71.png"></a>
-    </div>
-
-
-
-
-    <div class="banner_wraper2">
-        <a href="#"><img src="img/70.png"></a>
-        <a href="#"><img src="img/200.jpg"></a>
-        <a href="#"><img src="img/201.jpg"></a>
-        <a href="#"><img src="img/203.jpg"></a>
-        <a href="#"><img src="img/204.jpg"></a>
-        <a href="#"><img src="img/205.jpg"> </a>
-        <a href="#"><img src="img/206.jpg"></a>
-        <a href="#"><img src="img/80.jpg"></a>
-        <a href="#"><img src="img/img (2).jpg"></a>
-        <a href="#"><img src="img/71.png"></a>
-    </div>
-
-
-
-
-    <div class="banner_wraper3">
-        <a href="#"><img src="img/70.png"></a>
-        <a href="#"><img src="img/200.jpg"></a>
-        <a href="#"><img src="img/201.jpg"></a>
-        <a href="#"><img src="img/203.jpg"></a>
-        <a href="#"><img src="img/204.jpg"></a>
-        <a href="#"><img src="img/205.jpg"> </a>
-        <a href="#"><img src="img/206.jpg"></a>
-        <a href="#"><img src="img/80.jpg"></a>
-        <a href="#"><img src="img/img (2).jpg"></a>
-        <a href="#"><img src="img/71.png"></a>
-    </div>
+    <div class="slide1"></div>
+    <div class="slide2"></div>
+    <div class="slide3"></div>
 
 </div>
 
+<div id="anwpgks">
+    <p>싹 다 무제한<br>
+    9,900원</p><br>
+    <p>10년치 베스트셀러<br>
+    신간 오디오북 장르 소설까지</p>
+</div>
 
 
+<div class="qp">지금 서점 베스트 셀러</div>
+
+<div id="qptmxm">
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+</div>
+
+<script>
+    $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: { query: "에세이", size: 50 },
+    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+})
+    .done(function (msg) {
+        var boxs = document.getElementsByClassName("box1");
+        for (var i = 0; i < boxs.length; i++) {
+            $(".box1").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+            $(".box1").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+            $(".box1").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+            $(".box1").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+        }
+    });
+</script>
+
+
+
+<div class="qp2">한 달 이내 출간된 책</div>
+
+<div id="qptmxm2">
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+</div>
+
+<script>
+    $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: { query: "문학", size: 50 },
+    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+})
+    .done(function (msg) {
+        var boxs = document.getElementsByClassName("box2");
+        for (var i = 0; i < boxs.length; i++) {
+            $(".box2").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+            $(".box2").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+            $(".box2").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+            $(".box2").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+        }
+    });
+</script>
+
+
+<div class="qp3">오디오북 BEST</div>
+
+<div id="qptmxm3">
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+    <div class="box3"></div>
+</div>
+
+<script>
+    $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: { query: "오디오 북", size: 50 },
+    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+})
+    .done(function (msg) {
+        var boxs = document.getElementsByClassName("box3");
+        for (var i = 0; i < boxs.length; i++) {
+            $(".box3").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+            $(".box3").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+            $(".box3").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+            $(".box3").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+        }
+    });
+</script>
+
+
+<div class="qp4">밀리 독점 오리지널 로맨스</div>
+
+<div id="qptmxm4">
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+    <div class="box4"></div>
+</div>
+
+
+<script>
+    $.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: { query: "로맨스", size: 50 },
+    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+})
+    .done(function (msg) {
+        var boxs = document.getElementsByClassName("box4");
+        for (var i = 0; i < boxs.length; i++) {
+            $(".box4").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+            $(".box4").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+            $(".box4").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+            $(".box4").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+        }
+    });
+</script>
+
+
+<div id="rhkstla">
+    <p>관심 분야에 있는 책도<br>
+        딱 골라드려요</p><br>
+    <p>검색어 순위를 통해 뽑은<br>
+        인기 분야 책들을 확인해보세요</p>
+</div>
+
+
+<div id="sihibg">
+    <div class="but">
+        <a href="#">주식</a>
+        <a href="#">영어</a>
+        <a href="#">고전</a>
+        <a href="#">인테리어</a>
+        <a href="#">다이어트</a>
+    </div>
+
+    <div class="sihi1">
+
+    <div class="box5"></div>
+    <div class="box5"></div>
+    <div class="box5"></div>
+    <div class="box5"></div>
+    <div class="box5"></div>
+    <div class="box5"></div>
+    <div class="box5"></div>
+
+    </div>
+
+    <script>
+        $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "주식", size: 50 },
+        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+    })
+        .done(function (msg) {
+            var boxs = document.getElementsByClassName("box5");
+            for (var i = 0; i < boxs.length; i++) {
+                $(".box5").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                $(".box5").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                $(".box5").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                $(".box5").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+            }
+        });
+    </script>
+
+    <div class="sihi2">
+
+    <div class="box6"></div>
+    <div class="box6"></div>
+    <div class="box6"></div>
+    <div class="box6"></div>
+    <div class="box6"></div>
+    <div class="box6"></div>
+    <div class="box6"></div>
+
+    </div>
+
+    <script>
+        $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "영어", size: 50 },
+        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+    })
+        .done(function (msg) {
+            var boxs = document.getElementsByClassName("box6");
+            for (var i = 0; i < boxs.length; i++) {
+                $(".box6").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                $(".box6").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                $(".box6").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                $(".box6").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+            }
+        });
+    </script>
+
+
+    <div class="sihi3">
+
+        <div class="box7"></div>
+        <div class="box7"></div>
+        <div class="box7"></div>
+        <div class="box7"></div>
+        <div class="box7"></div>
+        <div class="box7"></div>
+        <div class="box7"></div>
+
+    </div>
+
+
+    <script>
+        $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "고전", size: 50 },
+        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+    })
+        .done(function (msg) {
+            var boxs = document.getElementsByClassName("box7");
+            for (var i = 0; i < boxs.length; i++) {
+                $(".box7").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                $(".box7").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                $(".box7").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                $(".box7").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+            }
+        });
+    </script>
+
+
+    <div class="sihi4">
+
+        <div class="box8"></div>
+        <div class="box8"></div>
+        <div class="box8"></div>
+        <div class="box8"></div>
+        <div class="box8"></div>
+        <div class="box8"></div>
+        <div class="box8"></div>
+
+    </div>
+
+    <script>
+        $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "인테리어", size: 50 },
+        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+    })
+        .done(function (msg) {
+            var boxs = document.getElementsByClassName("box8");
+            for (var i = 0; i < boxs.length; i++) {
+                $(".box8").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                $(".box8").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                $(".box8").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                $(".box8").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+            }
+        });
+    </script>
+
+
+    <div class="sihi5">
+
+        <div class="box9"></div>
+        <div class="box9"></div>
+        <div class="box9"></div>
+        <div class="box9"></div>
+        <div class="box9"></div>
+        <div class="box9"></div>
+        <div class="box9"></div>
+
+    </div>
+
+    <script>
+        $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "다이어트", size: 50 },
+        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+    })
+        .done(function (msg) {
+            var boxs = document.getElementsByClassName("box9");
+            for (var i = 0; i < boxs.length; i++) {
+                $(".box9").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                $(".box9").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                $(".box9").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                $(".box9").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+            }
+        });
+    </script>
+
+
+</div>
 
 
 
