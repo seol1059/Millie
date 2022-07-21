@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,682 +9,1887 @@
     <link rel="shortcut icon" href="img/stlogo.png">
 
     <style>
+        @font-face {
+            font-family: 'EarlyFontDiary';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'EarlyFontDiary';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'IM_Hyemin-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-@font-face {
-    font-family: 'IM_Hyemin-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IM_Hyemin-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: 'IM_Hyemin-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
 
-@font-face {
-    font-family: 'IM_Hyemin-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
+        @font-face {
+            font-family: 'IM_Hyemin-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
 
 
 
 
 
-          *{margin: 0 ; padding: 0; font-family: 'IM_Hyemin-Regular';}
-          ul, ol, li {list-style: none;}
-          html,body {width: 100%; height: 100%;}
-          a {text-decoration: none; color: black;}
-          button {border: none;}
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        button {
+            border: none;
+        }
 
 
- header {width: 100%; height: 70px; margin: 0 auto; background-color: #fff; z-index: 50;
-         border: 1px solid #ddd; position: fixed;}
+        header {
+            width: 100%;
+            height: 70px;
+            margin: 0 auto;
+            background-color: #fff;
+            z-index: 50;
+            border: 1px solid #ddd;
+            position: fixed;
+        }
 
- #headbg {width: 100%; height: 100%; margin: 0 auto;}
- .head {width: 70px; height: 100%; float: left; margin: 0 auto;  padding-left: 20px;}
- .head img {width: 100%; height: 100%; margin: 0 auto;}
+        #headbg {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
 
- .ad {width: 350px; height: 100%; float: right; margin: 0 auto; padding-right: 20px;
-       display: flex; flex-direction: row; justify-content: space-between;
-      align-items: center;}
- .ad p {font-size: 16px;}
- .ad a {font-size: 16px; width: 25%; height: 50%; text-align: center; 
-        background-color: #666; color: #fff; border-radius: 50px;
-       display: flex; align-items: center; justify-content: center;}
+        .head {
+            width: 70px;
+            height: 100%;
+            float: left;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
 
- #slide {width: 100%; height: 90%; background-image: url(img/slide200.png);
-          background-size: cover; background-position: center;  display: flex; 
-          flex-direction: column; justify-content: space-evenly; align-items: center;} 
+        .head img {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
 
- .sl {width: 75%; height: 500px; margin: 0 auto; float: left; display: flex; 
-       flex-direction: column; justify-content: center; align-items: flex-start;}
- .sl p:nth-of-type(1) {font-size: 60px; font-weight: bold; color: black;}
-  .sl p:nth-of-type(2) {font-size: 40px;}
+        .ad {
+            width: 350px;
+            height: 100%;
+            float: right;
+            margin: 0 auto;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  .de {width: 75%; height: 34px; margin: 0 auto; float: left;
-    display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-end;}
-.de img {width: 85px; height: 30px; }
- .de p {font-size: 20px; padding-left: 20px;}
+        .ad p {
+            font-size: 16px;
+        }
 
- #fixbg {width: 25%; height: 60px; margin: 0 auto; display: flex;  position: fixed; z-index: 50;}
- .fix {width: 100%; height: 100%; margin: 0 auto;  background-color: #666; border-radius: 60px;
-     display: flex; box-shadow: 4px 4px 4px #666;     position: absolute;
-    bottom: -15px;
-    left: 149%;}
- .fix a {width: 100%; height: 100%; margin: 0 auto; color: #fff; 
-         display: flex; justify-content: center; align-items: center; }
- .fix a b {font-weight: bold;}
+        .ad a {
+            font-size: 16px;
+            width: 25%;
+            height: 50%;
+            text-align: center;
+            background-color: #666;
+            color: #fff;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
- #anfy {width: 100%; height: 250px; margin: 0 auto;}
- .an {width: 1200px; height: 100%; margin: 0 auto; 
-    display: flex; flex-direction: column; justify-content: flex-end;}
-.an p:nth-of-type(1) {text-align: center; font-size: 40px; font-weight: bold;}
-.an p:nth-of-type(2) {text-align: center; font-size: 25px; color: #666;}
+        #slide {
+            width: 100%;
+            height: 90%;
+            background-image: url(img/slide200.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
-#clip {width: 100%; height: 80%; margin: 0 auto;  display: flex;
-  align-items: center; flex-direction: column;
-    justify-content: space-evenly;}
+        .sl {
+            width: 75%;
+            height: 500px;
+            margin: 0 auto;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: 'IM_Hyemin-Regular';
+        }
 
+        .sl p:nth-of-type(1) {
+            font-size: 60px;
+            font-weight: bold;
+            color: black;
+            transform: translateY(100px);
+            transition: all 1.5s;
+            opacity: 0;
+        }
 
+        .sl p:nth-of-type(2) {
+            font-size: 40px;
+            transform: translateY(100px);
+            transition: all 2s;
+            opacity: 0;
+        }
 
-#clip .slide1{  height: 220px;
-    width: 100%;
-    background-image: url(img/slide1.png);
-  background-repeat: repeat-x;
-  background-size: 3000px;
-  -webkit-animation-name: slide_left;
-          animation-name: slide_left;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  margin-top: 50px;
-  background-size: contain;
-display: flex;}
+        .de {
+            width: 75%;
+            height: 34px;
+            margin: 0 auto;
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
 
+        .de img {
+            width: 85px;
+            height: 30px;
+        }
 
+        .de p {
+            font-size: 20px;
+            padding-left: 20px;
+        }
 
-  #clip .slide2 {
-    height: 220px;
-    width: 100%;
-    background-image: url(img/slide2.png);
-  background-repeat: repeat-x;
-  background-size: 3000px;
-  -webkit-animation-name: slide_right;
-          animation-name: slide_right;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  margin-top: 50px;
-  background-size: contain;
-display: flex;
-}
+        #fixbg {
+            width: 25%;
+            height: 60px;
+            margin: 0 auto;
+            display: flex;
+            position: fixed;
+            z-index: 50;
+        }
 
+        .fix {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #666;
+            border-radius: 60px;
+            display: flex;
+            box-shadow: 4px 4px 4px #666;
+            position: absolute;
+            bottom: -15px;
+            left: 149%;
+        }
 
-#clip .slide3 {
-    height: 220px;
-    width: 100%;
-    background-image: url(img/slide3.png);
-  background-repeat: repeat-x;
-  background-size: 3000px;
-  -webkit-animation-name: slide_left;
-          animation-name: slide_left;
-  -webkit-animation-duration: 100s;
-          animation-duration: 100s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  margin-top: 50px;
-  background-size: contain;
-display: flex;
-}
+        .fix a {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-@-webkit-keyframes slide_left {
-  from {
-    background-position: 0px;
-  }
-  to {
-    background-position: -3000px;
-  }
-}
-@keyframes slide_left {
-  from {
-    background-position: 0px;
-  }
-  to {
-    background-position: -3000px;
-  }
-}
-@-webkit-keyframes slide_right {
-  from {
-    background-position: -3000px;
-  }
-  to {
-    background-position: 0px;
-  }
-}
-@keyframes slide_right {
-  from {
-    background-position: -3000px;
-  }
-  to {
-    background-position: 0px;
-  }
-}
+        .fix a b {
+            font-weight: bold;
+        }
 
-#anwpgks {width: 50%; height: 400px; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; text-align: center;}
-#anwpgks p:nth-of-type(1) { font-size: 50px; font-weight: bold; color: black; }
-#anwpgks p:nth-of-type(2) { font-size: 30px;  color: #666;}
+        #anfy {
+            width: 100%;
+            height: 250px;
+            margin: 0 auto;
+        }
 
-.qp {width: 60%; height: 70px; margin: 0 auto;     font-weight: bold;
-    display: flex; flex-direction: column; justify-content: flex-end;} 
+        .an {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
 
-#qptmxm {width: 1200px; height: 350px; margin: 0 auto; text-align: center;
-    display: flex; justify-content: space-evenly; flex-direction: row; align-items: center;}
+        .an p:nth-of-type(1) {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            transform: translateY(100px);
+            transition: all 2s;
+            opacity: 0;
+        }
 
-.box1 {    width: 100%;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        .an p:nth-of-type(2) {
+            text-align: center;
+            font-size: 25px;
+            color: #666;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
 
-    .box1 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-
- .qp2 {width: 60%; height: 70px; margin: 0 auto; display: flex;    font-weight: bold;
-    flex-direction: column; justify-content: flex-end;} 
-
-#qptmxm2 {width: 1200px; height: 350px; margin: 0 auto; display: flex;
-    justify-content: space-evenly; flex-direction: row; align-items: center;}
-
-.box2 {    width: 100%; text-align: center;
-    display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    .box2 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
- .qp3 {width: 60%; height: 70px; margin: 0 auto; display: flex;    font-weight: bold;
-    flex-direction: column; justify-content: flex-end;} 
-
-#qptmxm3 {width: 1200px; height: 350px; margin: 0 auto; display: flex; 
-    justify-content: space-evenly; flex-direction: row; align-items: center;}
-    
-.box3 {    width: 100%; display: flex;
-     flex-direction: column; justify-content: center; align-items: center; text-align: center;}
-     .box3 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-    .qp4 {width: 60%; height: 70px; margin: 0 auto; display: flex;    font-weight: bold;
-    flex-direction: column; justify-content: flex-end;} 
-
-#qptmxm4 {width: 1200px; height: 350px; margin: 0 auto; display: flex; 
-    justify-content: space-evenly; flex-direction: row; align-items: center;}
-    
-.box4 {    width: 100%; display: flex; 
-    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
-    .box4 img {box-shadow: 5px 5px 5px 2px #ddd;}
+        #clip {
+            width: 100%;
+            height: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
 
 
- #rhkstla { width: 70%; height: 400px; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center; text-align: center;}
- #rhkstla p:nth-of-type(1) { font-size: 50px; font-weight: bold; color: black; }
- #rhkstla p:nth-of-type(2) { font-size: 20px;  color: #666;}
 
- #sihibg {width: 1200px; height: 500px; margin: 0 auto;}
-.but {width: 35%; height: 100px; display: flex; justify-content: space-around;
-    align-items: center;}
-/* .but a {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
+        #clip .slide1 {
+            height: 220px;
+            width: 100%;
+            background-image: url(img/slide1.png);
+            background-repeat: repeat-x;
+            background-size: 3000px;
+            -webkit-animation-name: slide_left;
+            animation-name: slide_left;
+            -webkit-animation-duration: 100s;
+            animation-duration: 100s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            margin-top: 50px;
+            background-size: contain;
+            display: flex;
+        }
+
+
+
+        #clip .slide2 {
+            height: 220px;
+            width: 100%;
+            background-image: url(img/slide2.png);
+            background-repeat: repeat-x;
+            background-size: 3000px;
+            -webkit-animation-name: slide_right;
+            animation-name: slide_right;
+            -webkit-animation-duration: 100s;
+            animation-duration: 100s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            margin-top: 50px;
+            background-size: contain;
+            display: flex;
+        }
+
+
+        #clip .slide3 {
+            height: 220px;
+            width: 100%;
+            background-image: url(img/slide3.png);
+            background-repeat: repeat-x;
+            background-size: 3000px;
+            -webkit-animation-name: slide_left;
+            animation-name: slide_left;
+            -webkit-animation-duration: 100s;
+            animation-duration: 100s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            margin-top: 50px;
+            background-size: contain;
+            display: flex;
+        }
+
+        @-webkit-keyframes slide_left {
+            from {
+                background-position: 0px;
+            }
+
+            to {
+                background-position: -3000px;
+            }
+        }
+
+        @keyframes slide_left {
+            from {
+                background-position: 0px;
+            }
+
+            to {
+                background-position: -3000px;
+            }
+        }
+
+        @-webkit-keyframes slide_right {
+            from {
+                background-position: -3000px;
+            }
+
+            to {
+                background-position: 0px;
+            }
+        }
+
+        @keyframes slide_right {
+            from {
+                background-position: -3000px;
+            }
+
+            to {
+                background-position: 0px;
+            }
+        }
+
+        #anwpgks {
+            width: 50%;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        #anwpgks p:nth-of-type(1) {
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #anwpgks p:nth-of-type(2) {
+            font-size: 30px;
+            color: #666;
+        }
+
+        .qp {
+            width: 60%;
+            height: 70px;
+            margin: 0 auto;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #qptmxm {
+            width: 1200px;
+            height: 350px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .box1 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .box1 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+
+        .qp2 {
+            width: 60%;
+            height: 70px;
+            margin: 0 auto;
+            display: flex;
+            font-weight: bold;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #qptmxm2 {
+            width: 1200px;
+            height: 350px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .box2 {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .box2 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+        .qp3 {
+            width: 60%;
+            height: 70px;
+            margin: 0 auto;
+            display: flex;
+            font-weight: bold;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #qptmxm3 {
+            width: 1200px;
+            height: 350px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .box3 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        .box3 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+        .qp4 {
+            width: 60%;
+            height: 70px;
+            margin: 0 auto;
+            display: flex;
+            font-weight: bold;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #qptmxm4 {
+            width: 1200px;
+            height: 350px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .box4 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        .box4 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+
+        #rhkstla {
+            width: 70%;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        #rhkstla p:nth-of-type(1) {
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #rhkstla p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        #sihibg {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .but {
+            width: 35%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* .but a {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
     border-radius: 50px; border: 1px solid #666;  display: flex; justify-content: space-around;
     align-items: center;}  */
-    .but button {width: 70px; height: 30px; border-radius: 50px; background-color: white; 
-    border-radius: 50px; border: 1px solid #666;  display: flex; justify-content: space-around;
-    align-items: center;}
-
-.sihi1 {width: 100%; height: 400px; margin: 0 auto; display: flex; justify-content: space-around;
-    align-items: center;}
-.box5 {    width: 100%; display: flex; 
-    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
-    .box5 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-    .sihi2 {width: 100%; height: 400px; margin: 0 auto; display: none;
-        display: flex; justify-content: space-around;
-    align-items: center;
-}
-.box6 {    width: 100%; display: flex; 
-    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
-    .box6 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-    .sihi3 {width: 100%; height: 400px; margin: 0 auto; display: none;
-         display: flex; justify-content: space-around;
-    align-items: center;
-}
-
-.box7 {    width: 100%; display: flex; 
-    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
-    .box7 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-    .sihi4 {width: 100%; height: 400px; margin: 0 auto;  display: none;
-        display: flex; justify-content: space-around;
-    align-items: center;
-}
-
-.box8 {    width: 100%; display: flex; 
-    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
-    .box8 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-    .sihi5 {width: 100%; height: 400px; margin: 0 auto; display: none;
-        display: flex; justify-content: space-around;
-    align-items: center;
-}
-
-.box9 {    width: 100%; display: flex; 
-    flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
-    .box9 img {box-shadow: 5px 5px 5px 2px #ddd;}
-
-
-#ekdtlsdl {width: 100%; height: 90%;  background-color: #f7f7f7;}
-
-.tt {width: 100%; height: 30%; margin: 0 auto; 
-    display: flex;  flex-direction: column;  justify-content: center; align-items: center;}
-    .tt p:nth-of-type(1) {text-align: center; font-size: 40px; font-weight: bold;}
-.tt p:nth-of-type(2) {text-align: center; font-size: 20px; color: #666;}
-
-
-.phon {width: 25%; height: 70%; margin: 0 auto; position: relative;}
-.phon img:nth-of-type(1) {width: 100%; height: 100%; }
-.phon img:nth-of-type(2) {   width: 94%; height: 25%; position: absolute; 
-    z-index: 1; top: 330px; left: 4px; }
-.phon img:nth-of-type(3) {     width: 35%; height: 28%; position: absolute;
-    z-index: 1; top: 388px; left: -300px;}
-.phon img:nth-of-type(4) {     width: 35%; height: 28%; position: absolute;
-    z-index: 1; top: 100px; left: -200px;}
-    .phon img:nth-of-type(5) {     width: 35%; height: 28%; position: absolute;
-    z-index: 1; top: 388px; right: -300px;}
-.phon img:nth-of-type(6) {     width: 35%; height: 28%; position: absolute;
-    z-index: 1; top: 100px; right: -200px;}
-
-
-#djswpemsbg {width: 100%; height: 800px; margin: 0 auto;     background-color: #ffeb60;}
-
-.djswpems {width: 1200px; height: 40%; margin: 0 auto; }
-.dj1 {width: 100%; height: 100%; margin:  0 auto; display: flex; flex-direction: column;
-    justify-content: center; align-items: center;}
-.dj1 p:nth-of-type(1) {text-align: center; font-size: 40px; font-weight: bold;}
-.dj1 p:nth-of-type(2) {text-align: center; font-size: 20px; color: #666;}
-
-.dj2 {width: 100%; height: 60%; margin: 0 auto; display: flex;} 
-
-.dj2_1 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
-     border-radius: 20px;   box-shadow: 10px 10px 40px rgb(0 0 0 / 10%); display: flex; 
-     flex-direction: column; justify-content: space-evenly; align-items: flex-start; 
-     position: relative;}
-
-     .dj2_1 img {width: 60px; height: 30px; position: absolute; top: 138px; left: 100px; }  
-     .dj2_1 p {padding-left: 20px; font-size: 18px;}
-     .dj2_1 p b {font-size: 24px;}
-
- .dj2_2 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
-     border-radius: 20px;   box-shadow: 10px 10px 40px rgb(0 0 0 / 10%); display: flex; 
-     flex-direction: column; justify-content: space-evenly; align-items: flex-start;
-      position: relative;}
-
-     .dj2_2 img { width: 60px; height: 30px; position: absolute; top: 127px; left: 100px;}  
-     .dj2_2 p {padding-left: 20px; font-size: 18px;}
-     .dj2_2 p b {font-size: 24px;}
-
- .dj2_3 {width: 350px; height: 300px; margin: 0 auto; 
-     border-radius: 20px;}
-
-     .dj2_31 {width: 100%; height: 50%; margin: 0 auto; 
-        display: flex; justify-content: space-around;
-    align-items: center; border-bottom: 1px solid #fff;}
-     .dj2_31 img {width: 80px; height: 80px;}
-     .dj2_31 p {font-size: 16px; font-weight: bold;}
-
-     .dj2_32 {width: 100%; height: 50%; margin: 0 auto; 
-        display: flex; justify-content: space-around;
-    align-items: center;}
-     .dj2_32 img {width: 80px; height: 80px;}
-     .dj2_32 p {font-size: 16px; font-weight: bold;}
-
-
-    #dkdlvhs {width: 100%; height: 1000px; margin: 0 auto; background-color: antiquewhite;}
-    .tpro {width: 100%; height: 120px; margin: 0 auto; background-color: #fff;
-        display: flex;}
-        .tpro ul {width: 1200px; height: 100%; margin: 0 auto; display: flex;}
-        .tpro ul li {width: 33%; height: 100%; margin: 0 auto; display: flex; 
-        flex-direction: column; align-items: center; justify-content: space-evenly;}
-    /* .tpro ul li a {width: 33%; height: 100%; margin: 0 auto; } */
-    .tpro ul li img {width: 30px; height: 30px ;}
-
-    .dkbg {width: 1200px; height: 880px; margin: 0 auto; display: flex; flex-direction: column;
-    flex-wrap: wrap; }
-
-
-
-
-   .dk1 {width: 50%; height: 440px; float: left; margin: 0 auto; }
-
-   .dk1_1 {width: 100%; height: 100%; display: flex;     flex-direction: column;
-    justify-content: center; align-items: flex-start; padding-left: 115px;}
-   .dk1_1 img {width: 30px; height: 30px; padding: 10px;}
-   .dk1_1 p:nth-of-type(1) {font-size: 50px; padding: 10px; font-weight: bold;}
-   .dk1_1 p:nth-of-type(2) {font-size: 20px; padding: 10px;}
-
-   
-
-   .dk2 {width: 50%; height: 440px; float: left; margin: 0 auto; 
-    display: flex;  flex-direction: column; justify-content: center; align-items: center;}
-   .dk2_1 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_1 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_12 {display: none;}
-   .dk2_12 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_12 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_13 {display: none;}
-   .dk2_13 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_13 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_14 {display: none;}
-   .dk2_14 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_14 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-
-
-
-   .dk2_3 {width: 70%; height: 10%; display: flex;}
-   .dk2_3 ul { width: 100%; height: 100%; padding-left: 20px;
-    display: flex; align-items: flex-end; justify-content: space-evenly;}
-   .dk2_3 ul li {width: 80px; height: 30px;  border: 1px solid #666 ; border-radius: 50px; 
-    display: flex; justify-content: center;
-    align-items: center;}
-   /* .dk2_3 ul li a {fon} */
-   .dk3 {width: 50%; height: 880px; float: right; margin: 0 auto; 
-    display: flex; justify-content: center; align-items: center; position: relative;}
-   .dk3 img:nth-of-type(1) {width: 55%; height: 80%; z-index: 10; position: absolute; }
-   .dk3 img:nth-of-type(2) {width: 55%; height: 80%; z-index: 1; position: absolute; 
-    border-radius: 55px; }
-   .dk3 video {width: 55%; height: 80%; z-index: 1; position: absolute; border-radius: 55px;
-     display: none; }
-   .dk3 img:nth-of-type(3) {width: 55%; height: 80%; z-index: 1; position: absolute;
-     border-radius: 55px; display: none;  }
-   .dk3 img:nth-of-type(4) {width: 55%; height: 80%; z-index: 1; position: absolute;
-     border-radius: 55px; display: none;  }
-
-
-
-
-
-
-
-
-
-     .dkbg2 {width: 1200px; height: 880px; margin: 0 auto; display: flex; flex-direction: column;
-    flex-wrap: wrap; background-color: antiquewhite; }
-
-
-
-
-   .dk12 {width: 50%; height: 440px; float: left; margin: 0 auto; }
-
-   .dk1_12 {width: 100%; height: 100%; display: flex;     flex-direction: column;
-    justify-content: center; align-items: flex-start; padding-left: 115px;}
-   .dk1_12 img {width: 30px; height: 30px; padding: 10px;}
-   .dk1_12 p:nth-of-type(1) {font-size: 50px; padding: 10px;font-weight: bold;}
-   .dk1_12 p:nth-of-type(2) {font-size: 20px; padding: 10px;}
-
-   
-
-   .dk22 {width: 50%; height: 440px; float: left; margin: 0 auto; 
-    display: flex;  flex-direction: column; justify-content: center; align-items: center;}
-   .dk2_12 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_12 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_122 {display: none;}
-   .dk2_122 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_122 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_132 {display: none;}
-   .dk2_132 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_132 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_142 {display: none;}
-   .dk2_142 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_142 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-
-
-
-   .dk2_32 {width: 70%; height: 10%; display: flex;}
-   .dk2_32 ul { width: 100%; height: 100%; padding-left: 20px;
-    display: flex; align-items: flex-end; justify-content: space-evenly;}
-   .dk2_32 ul li {width: 80px; height: 30px;  border: 1px solid #666 ; border-radius: 50px; 
-    display: flex; justify-content: center;
-    align-items: center;}
-   /* .dk2_3 ul li a {fon} */
-   .dk32 {width: 50%; height: 880px; float: right; margin: 0 auto; 
-    display: flex; justify-content: center; align-items: center; position: relative;}
-   .dk32 img:nth-of-type(1) {width: 55%; height: 80%; z-index: 10; position: absolute; }
-   .dk32 img:nth-of-type(2) {width: 55%; height: 80%; z-index: 1; position: absolute; 
-    border-radius: 55px; }
-   .dk32 video {width: 55%; height: 80%; z-index: 1; position: absolute; border-radius: 55px;
-     display: none; }
-   .dk32 img:nth-of-type(3) {width: 55%; height: 80%; z-index: 1; position: absolute;
-     border-radius: 55px; display: none;  }
-   .dk32 img:nth-of-type(4) {width: 55%; height: 80%; z-index: 1; position: absolute;
-     border-radius: 55px; display: none;  }
-
-
-
-
-
-
-
-     .dkbg3 {width: 1200px; height: 880px; margin: 0 auto; display: flex; flex-direction: column;
-    flex-wrap: wrap; }
-
-
-
-
-   .dk13 {width: 50%; height: 440px; float: left; margin: 0 auto; }
-
-   .dk1_13 {width: 100%; height: 100%; display: flex;     flex-direction: column;
-    justify-content: center; align-items: flex-start; padding-left: 115px;}
-   .dk1_13 img {width: 30px; height: 30px; padding: 10px;}
-   .dk1_13 p:nth-of-type(1) {font-size: 50px; padding: 10px; font-weight: bold;}
-   .dk1_13 p:nth-of-type(2) {font-size: 20px; padding: 10px;}
-
-   
-
-   .dk23 {width: 50%; height: 440px; float: left; margin: 0 auto; 
-    display: flex;  flex-direction: column; justify-content: center; align-items: center;}
-   .dk2_13 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_13 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_123 {display: none;}
-   .dk2_123 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_123 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_133 {display: none;}
-   .dk2_133 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_133 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-   .dk2_143 {display: none;}
-   .dk2_143 p:nth-of-type(1) {font-size: 20px; font-weight: bold;}
-   .dk2_143 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-
-
-
-   .dk2_33 {width: 70%; height: 10%; display: flex;}
-   .dk2_33 ul { width: 100%; height: 100%; padding-left: 20px;
-    display: flex; align-items: flex-end; justify-content: space-evenly;}
-   .dk2_33 ul li {width: 80px; height: 30px;  border: 1px solid #666 ; border-radius: 50px; 
-    display: flex; justify-content: center;
-    align-items: center;}
-   /* .dk2_3 ul li a {fon} */
-   .dk33 {width: 50%; height: 880px; float: right; margin: 0 auto; 
-    display: flex; justify-content: center; align-items: center; position: relative;}
-   .dk33 img:nth-of-type(1) {width: 55%; height: 80%; z-index: 10; position: absolute; }
-   .dk33 img:nth-of-type(2) {width: 55%; height: 80%; z-index: 1; position: absolute; 
-    border-radius: 55px; }
-   .dk33 video {width: 55%; height: 80%; z-index: 1; position: absolute; border-radius: 55px;
-     display: none; }
-   .dk33 img:nth-of-type(3) {width: 55%; height: 80%; z-index: 1; position: absolute;
-     border-radius: 55px; display: none;  }
-   .dk33 img:nth-of-type(4) {width: 55%; height: 80%; z-index: 1; position: absolute;
-     border-radius: 55px; display: none;  }
-
-
-
-
-     #ehddudtkd {width: 100%; height: 500px; position: relative; z-index: 1;
-         background-image: url("img/ehrtj.jpg"); background-position: center; 
-         background-size: cover;}
-    .eh {width: 100%; height: 500px ; position: absolute; z-index: 2; 
-        background-color: rgb(255, 196, 0); opacity: 0.9;}
-    .kd1 {width: 30%; height: 100%; float: left; position: absolute; z-index: 3;  }
-    .kd1 iframe {width: 400px; height: 400px;
-         position: absolute; z-index: 4; top: -40px; left: 500px;}
-
-    .kd2 {width: 30%; height: 100%; float: right; position: absolute; z-index: 3; right: 10%; 
-        display: flex;  flex-direction: column; justify-content: center; align-items: flex-start;
-         text-align: left;}
-
-         .kd2 p:nth-of-type(1) {font-size: 40px; font-weight: bold;}
-         .kd2 p:nth-of-type(2) {font-size: 20px; color: #666;}
-
-#qnabg {width: 100%; height: auto; margin: 0 auto;     background: #ffeb60; }
-#qnabg h2 {font-size: 50px ; text-align: center; padding: 50px;}
-
-.te {width: 1000px; height: auto; margin: 0 auto;  background: #ffeb60; padding-bottom: 50px; }
-
-
-.accordion {
-    background-color: white;
-  color: #444;
-  cursor: pointer;
-  padding: 20px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  border-radius: 15px;
-  margin-top: 20px;
-  box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
-  font-weight: bold;
-}
-
-
-
-.active, .accordion:hover {
-    background-color: white;
-  border-bottom: 1px solid #666;
-  border-width: 30%;
-}
-
-.accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-  
-
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-border-radius: 0px 0px 15px 15px;
-margin-top: -10px;
-box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
-
-}
-
-
-
-.panel p {padding: 30px;}
-
-footer {width: 1000px;  height: 250px; margin: 0 auto; font-size: 12px;}
-#foo {width: 1000px; height: 100px; margin: 0 auto; display: flex;     flex-direction: row;
-    justify-content: space-between; align-items: center;}
-.foo1 {width: 200px; height: 100%; display: flex;     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center; font-size: 16px; font-weight: bold; }
-.foo2 {width: 200px; height: 100%; display: flex;     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;}
-.foo2 img {width: 20px; height: 20px;}
-
-.accordion2 {
-  background-color: white;
-  color: #444;
-  cursor: pointer;
-  padding: 18px 18px 18px 0px;
-  width: 30%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  display: flex;
-}
-
-.active2, .accordion2:hover {
-  background-color: white;
-}
-
-.accordion2:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active2:after {
-  content: "\2212";
-}
-
-.panel2 {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
+        .but button {
+            width: 70px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: white;
+            border-radius: 50px;
+            border: 1px solid #666;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .sihi1 {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box5 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        .box5 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+        .sihi2 {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            display: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box6 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        .box6 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+        .sihi3 {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            display: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box7 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        .box7 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+        .sihi4 {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            display: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box8 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        .box8 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+        .sihi5 {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            display: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box9 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .box9 img {
+            box-shadow: 5px 5px 5px 2px #ddd;
+        }
+
+
+        #ekdtlsdl {
+            width: 100%;
+            height: 90%;
+            background-color: #f7f7f7;
+        }
+
+        .tt {
+            width: 100%;
+            height: 30%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .tt p:nth-of-type(1) {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .tt p:nth-of-type(2) {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+        }
+
+
+        .phon {
+            width: 25%;
+            height: 70%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .phon img:nth-of-type(1) {
+            width: 100%;
+            height: 100%;
+        }
+
+        .phon img:nth-of-type(2) {
+            width: 94%;
+            height: 25%;
+            position: absolute;
+            z-index: 1;
+            top: 330px;
+            left: 4px;
+        }
+
+        .phon img:nth-of-type(3) {
+            width: 35%;
+            height: 28%;
+            position: absolute;
+            z-index: 1;
+            top: 388px;
+            left: -300px;
+            transform: translateY(0px);
+            transition: all 1s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .phon img:nth-of-type(4) {
+            width: 35%;
+            height: 28%;
+            position: absolute;
+            z-index: 1;
+            top: 100px;
+            left: -200px;
+            transform: translateY(0px);
+            transition: all 1.5s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .phon img:nth-of-type(5) {
+            width: 35%;
+            height: 28%;
+            position: absolute;
+            z-index: 1;
+            top: 388px;
+            right: -300px;
+            transform: translateY(0px);
+            transition: all 2s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .phon img:nth-of-type(6) {
+            width: 35%;
+            height: 28%;
+            position: absolute;
+            z-index: 1;
+            top: 100px;
+            right: -200px;
+            transform: translateY(0px);
+            transition: all 2.5s;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+
+        #djswpemsbg {
+            width: 100%;
+            height: 800px;
+            margin: 0 auto;
+            background-color: #ffeb60;
+        }
+
+        .djswpems {
+            width: 1200px;
+            height: 40%;
+            margin: 0 auto;
+        }
+
+        .dj1 {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dj1 p:nth-of-type(1) {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .dj1 p:nth-of-type(2) {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dj2 {
+            width: 100%;
+            height: 60%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .dj2_1 {
+            width: 350px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+            border-radius: 20px;
+            box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .dj2_1 img {
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            top: 138px;
+            left: 100px;
+        }
+
+        .dj2_1 p {
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        .dj2_1 p b {
+            font-size: 24px;
+        }
+
+        .dj2_2 {
+            width: 350px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+            border-radius: 20px;
+            box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .dj2_2 img {
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            top: 127px;
+            left: 100px;
+        }
+
+        .dj2_2 p {
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        .dj2_2 p b {
+            font-size: 24px;
+        }
+
+        .dj2_3 {
+            width: 350px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        .dj2_31 {
+            width: 100%;
+            height: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        .dj2_31 img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .dj2_31 p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .dj2_32 {
+            width: 100%;
+            height: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .dj2_32 img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .dj2_32 p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+        #dkdlvhs {
+            width: 100%;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+
+        .tpro {
+            width: 100%;
+            height: 120px;
+            margin: 0 auto;
+            background-color: #fff;
+            display: flex;
+        }
+
+        .tpro ul {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .tpro ul li {
+            width: 33%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            font-weight: bold;
+        }
+
+        /* .tpro ul li a {width: 33%; height: 100%; margin: 0 auto; } */
+        .tpro ul li img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .dkbg {
+            width: 1200px;
+            height: 880px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+
+
+        .dk1 {
+            width: 50%;
+            height: 440px;
+            float: left;
+            margin: 0 auto;
+        }
+
+        .dk1_1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 115px;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dk1_1 img {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+        }
+
+        .dk1_1 p:nth-of-type(1) {
+            font-size: 50px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .dk1_1 p:nth-of-type(2) {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+
+
+        .dk2 {
+            width: 50%;
+            height: 440px;
+            float: left;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dk2_1 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_1 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_12 {
+            display: none;
+        }
+
+        .dk2_12 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_12 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_13 {
+            display: none;
+        }
+
+        .dk2_13 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_13 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_14 {
+            display: none;
+        }
+
+        .dk2_14 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_14 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+
+
+
+        .dk2_3 {
+            width: 70%;
+            height: 10%;
+            display: flex;
+        }
+
+        .dk2_3 ul {
+            width: 100%;
+            height: 100%;
+            padding-left: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+
+        .dk2_3 ul li {
+            width: 80px;
+            height: 30px;
+            border: 1px solid #666;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .dk2_3 ul li a {fon} */
+        .dk3 {
+            width: 50%;
+            height: 880px;
+            float: right;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dk3 img:nth-of-type(1) {
+            width: 55%;
+            height: 80%;
+            z-index: 10;
+            position: absolute;
+        }
+
+        .dk3 img:nth-of-type(2) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+        }
+
+        .dk3 video {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+        .dk3 img:nth-of-type(3) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+        .dk3 img:nth-of-type(4) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+        .dkbg2 {
+            width: 1200px;
+            height: 880px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background-color: antiquewhite;
+        }
+
+
+
+
+        .dk12 {
+            width: 50%;
+            height: 440px;
+            float: left;
+            margin: 0 auto;
+        }
+
+        .dk1_12 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 115px;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dk1_12 img {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+        }
+
+        .dk1_12 p:nth-of-type(1) {
+            font-size: 50px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .dk1_12 p:nth-of-type(2) {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+
+
+        .dk22 {
+            width: 50%;
+            height: 440px;
+            float: left;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dk2_12 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_12 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_122 {
+            display: none;
+        }
+
+        .dk2_122 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_122 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_132 {
+            display: none;
+        }
+
+        .dk2_132 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_132 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_142 {
+            display: none;
+        }
+
+        .dk2_142 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_142 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+
+
+
+        .dk2_32 {
+            width: 70%;
+            height: 10%;
+            display: flex;
+        }
+
+        .dk2_32 ul {
+            width: 100%;
+            height: 100%;
+            padding-left: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+
+        .dk2_32 ul li {
+            width: 80px;
+            height: 30px;
+            border: 1px solid #666;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .dk2_3 ul li a {fon} */
+        .dk32 {
+            width: 50%;
+            height: 880px;
+            float: right;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dk32 img:nth-of-type(1) {
+            width: 55%;
+            height: 80%;
+            z-index: 10;
+            position: absolute;
+        }
+
+        .dk32 img:nth-of-type(2) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+        }
+
+        .dk32 video {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+        .dk32 img:nth-of-type(3) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+        .dk32 img:nth-of-type(4) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+
+
+
+
+
+
+        .dkbg3 {
+            width: 1200px;
+            height: 880px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+
+
+        .dk13 {
+            width: 50%;
+            height: 440px;
+            float: left;
+            margin: 0 auto;
+        }
+
+        .dk1_13 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 115px;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dk1_13 img {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+        }
+
+        .dk1_13 p:nth-of-type(1) {
+            font-size: 50px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .dk1_13 p:nth-of-type(2) {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+
+
+        .dk23 {
+            width: 50%;
+            height: 440px;
+            float: left;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dk2_13 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_13 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_123 {
+            display: none;
+        }
+
+        .dk2_123 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_123 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_133 {
+            display: none;
+        }
+
+        .dk2_133 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_133 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .dk2_143 {
+            display: none;
+        }
+
+        .dk2_143 p:nth-of-type(1) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dk2_143 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+
+
+
+        .dk2_33 {
+            width: 70%;
+            height: 10%;
+            display: flex;
+        }
+
+        .dk2_33 ul {
+            width: 100%;
+            height: 100%;
+            padding-left: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+
+        .dk2_33 ul li {
+            width: 80px;
+            height: 30px;
+            border: 1px solid #666;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .dk2_3 ul li a {fon} */
+        .dk33 {
+            width: 50%;
+            height: 880px;
+            float: right;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .dk33 img:nth-of-type(1) {
+            width: 55%;
+            height: 80%;
+            z-index: 10;
+            position: absolute;
+        }
+
+        .dk33 img:nth-of-type(2) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+        }
+
+        .dk33 video {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+        .dk33 img:nth-of-type(3) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+        .dk33 img:nth-of-type(4) {
+            width: 55%;
+            height: 80%;
+            z-index: 1;
+            position: absolute;
+            border-radius: 55px;
+            display: none;
+        }
+
+
+
+
+        #ehddudtkd {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            z-index: 1;
+            background-image: url("img/ehrtj.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .eh {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            z-index: 2;
+            background-color: rgb(255, 196, 0);
+            opacity: 0.9;
+        }
+
+        .kd1 {
+            width: 30%;
+            height: 100%;
+            float: left;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .kd1 iframe {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            z-index: 4;
+            top: -40px;
+            left: 500px;
+        }
+
+        .kd2 {
+            width: 30%;
+            height: 100%;
+            float: right;
+            position: absolute;
+            z-index: 3;
+            right: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            transform: translateY(100px);
+            transition: all 2.5s;
+            opacity: 0;
+        }
+
+        .kd2 p:nth-of-type(1) {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .kd2 p:nth-of-type(2) {
+            font-size: 20px;
+            color: #666;
+        }
+
+        #qnabg {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            background: #ffeb60;
+        }
+
+        #qnabg h2 {
+            font-size: 50px;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .te {
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
+            background: #ffeb60;
+            padding-bottom: 50px;
+        }
+
+
+        .accordion {
+            background-color: white;
+            color: #444;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
+            font-weight: bold;
+        }
+
+
+
+        .active,
+        .accordion:hover {
+            background-color: white;
+            border-bottom: 1px solid #666;
+            border-width: 30%;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+
+
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 0px 0px 15px 15px;
+            margin-top: -10px;
+            box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
+
+        }
+
+
+
+        .panel p {
+            padding: 30px;
+        }
+
+        footer {
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        #foo {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .foo1 {
+            width: 200px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .foo2 {
+            width: 200px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .foo2 img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .foo3 {
+            padding-bottom: 30px;
+        }
+
+        .accordion2 {
+            background-color: white;
+            color: #444;
+            cursor: pointer;
+            padding: 18px 18px 18px 0px;
+            width: 30%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            display: flex;
+        }
+
+        .active2,
+        .accordion2:hover {
+            background-color: white;
+        }
+
+        .accordion2:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active2:after {
+            content: "\2212";
+        }
+
+        .panel2 {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
     </style>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
@@ -696,15 +1902,15 @@ footer {width: 1000px;  height: 250px; margin: 0 auto; font-size: 12px;}
 </head>
 
 <body>
-    
+
     <header>
-     
+
         <div id="headbg">
-    
+
             <div class="head">
                 <a href="#"><img src="img/logo_b.jpg" alt="."></a>
             </div>
-    
+
             <div class="ad">
                 <p>기업문의</p>
                 <p>계정관리</p>
@@ -712,7 +1918,7 @@ footer {width: 1000px;  height: 250px; margin: 0 auto; font-size: 12px;}
             </div>
 
         </div>
-    
+
     </header>
 
     <div id="slide">
@@ -738,802 +1944,811 @@ footer {width: 1000px;  height: 250px; margin: 0 auto; font-size: 12px;}
         </div>
     </div>
 
-   <div id="anfy">
-    <div class="an">
-        <p>당신을 기다리는<br>
-           11만권의 도서</p>
-        <p><br>첫 달 무료 구독을 통해<br>
-          어떤 도서가 있는지 확인해보세요</p>
+    <div id="anfy">
+        <div class="an">
+            <p>당신을 기다리는<br>
+                11만권의 도서</p>
+            <p><br>첫 달 무료 구독을 통해<br>
+                어떤 도서가 있는지 확인해보세요</p>
+        </div>
     </div>
-   </div>
 
 
-<div id="clip">
+    <div id="clip">
 
-    <div class="slide1"></div>
-    <div class="slide2"></div>
-    <div class="slide3"></div>
+        <div class="slide1"></div>
+        <div class="slide2"></div>
+        <div class="slide3"></div>
 
-</div>
+    </div>
 
-<div id="anwpgks">
-    <p>싹 다 무제한<br>
-    9,900원</p><br>
-    <p>10년치 베스트셀러<br>
-    신간 오디오북 장르 소설까지</p>
-</div>
-
-
-<div class="qp">지금 서점 베스트 셀러</div>
-
-<div id="qptmxm">
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-</div>
-
-<script>
-    $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v3/search/book?target=title",
-    data: { query: "에세이", size: 50 },
-    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-})
-    .done(function (msg) {
-        var boxs = document.getElementsByClassName("box1");
-        for (var i = 0; i < boxs.length; i++) {
-            $(".box1").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-            $(".box1").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-            $(".box1").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-            $(".box1").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-        }
-    });
-</script>
+    <div id="anwpgks">
+        <p>싹 다 무제한<br>
+            9,900원</p><br>
+        <p>10년치 베스트셀러<br>
+            신간 오디오북 장르 소설까지</p>
+    </div>
 
 
+    <div class="qp">지금 서점 베스트 셀러</div>
 
-<div class="qp2">한 달 이내 출간된 책</div>
-
-<div id="qptmxm2">
-    <div class="box2"></div>
-    <div class="box2"></div>
-    <div class="box2"></div>
-    <div class="box2"></div>
-    <div class="box2"></div>
-    <div class="box2"></div>
-    <div class="box2"></div>
-</div>
-
-<script>
-    $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v3/search/book?target=title",
-    data: { query: "문학", size: 50 },
-    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-})
-    .done(function (msg) {
-        var boxs = document.getElementsByClassName("box2");
-        for (var i = 0; i < boxs.length; i++) {
-            $(".box2").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-            $(".box2").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-            $(".box2").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-            $(".box2").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-        }
-    });
-</script>
-
-
-<div class="qp3">오디오북 BEST</div>
-
-<div id="qptmxm3">
-    <div class="box3"></div>
-    <div class="box3"></div>
-    <div class="box3"></div>
-    <div class="box3"></div>
-    <div class="box3"></div>
-    <div class="box3"></div>
-    <div class="box3"></div>
-</div>
-
-<script>
-    $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v3/search/book?target=title",
-    data: { query: "오디오 북", size: 50 },
-    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-})
-    .done(function (msg) {
-        var boxs = document.getElementsByClassName("box3");
-        for (var i = 0; i < boxs.length; i++) {
-            $(".box3").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-            $(".box3").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-            $(".box3").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-            $(".box3").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-        }
-    });
-</script>
-
-
-<div class="qp4">밀리 독점 오리지널 로맨스</div>
-
-<div id="qptmxm4">
-    <div class="box4"></div>
-    <div class="box4"></div>
-    <div class="box4"></div>
-    <div class="box4"></div>
-    <div class="box4"></div>
-    <div class="box4"></div>
-    <div class="box4"></div>
-</div>
-
-
-<script>
-    $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v3/search/book?target=title",
-    data: { query: "로맨스", size: 50 },
-    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-})
-    .done(function (msg) {
-        var boxs = document.getElementsByClassName("box4");
-        for (var i = 0; i < boxs.length; i++) {
-            $(".box4").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-            $(".box4").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-            $(".box4").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-            $(".box4").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-        }
-    });
-</script>
-
-
-<div id="rhkstla">
-    <p>관심 분야에 있는 책도<br>
-        딱 골라드려요</p><br>
-    <p>검색어 순위를 통해 뽑은<br>
-        인기 분야 책들을 확인해보세요</p>
-</div>
-
-
-<div id="sihibg">
-    <div class="but">
-        <button  type="button"  class="btn11" id="btn11">주식</button> 
-        <button  type="button" class="btn12" id="btn12">영어</button>
-        <button type="button"  class="btn13" id="btn13">고전</button>
-        <button  type="button" class="btn14" id="btn14">인테리어</button>
-        <button type="button"  class="btn15" id="btn15">다이어트</button>
+    <div id="qptmxm">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
     </div>
 
     <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "에세이", size: 50 },
+            headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+        })
+            .done(function (msg) {
+                var boxs = document.getElementsByClassName("box1");
+                for (var i = 0; i < boxs.length; i++) {
+                    $(".box1").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                    $(".box1").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                    $(".box1").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    $(".box1").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                }
+            });
+    </script>
 
-           $(document).ready(function(){
-            btn11.style.backgroundColor="#666";
-            btn11.style.color="white";
-               
-    });
 
-      btn11.onclick=function (e){
-        
-        if(e.target.id=="btn11"){btn11.style.backgroundColor="#666";
-        btn11.style.color="white";
-        
-            btn12.style.backgroundColor = "white";
-            btn12.style.color = "#666";
-            btn13.style.backgroundColor = "white";
-            btn13.style.color = "#666";
-            btn14.style.backgroundColor = "white";
-            btn14.style.color = "#666";
-            btn15.style.backgroundColor = "white";
-            btn15.style.color = "#666";}
 
-        }
+    <div class="qp2">한 달 이내 출간된 책</div>
 
-        btn12.onclick=function (e){
-        
-        if(e.target.id=="btn12"){btn12.style.backgroundColor="#666";
-        btn12.style.color="white";
-        
-        btn11.style.backgroundColor="white";
-        btn11.style.color="#666";
-        btn13.style.backgroundColor="white";
-        btn13.style.color="#666";
-        btn14.style.backgroundColor="white";
-        btn14.style.color="#666";
-        btn15.style.backgroundColor="white";
-    btn15.style.color="#666";}
-}
-btn13.onclick=function (e){
-        if(e.target.id=="btn13"){btn13.style.backgroundColor="#666";
-        btn13.style.color="white";
-        
-        btn11.style.backgroundColor="white";
-        btn11.style.color="#666";
-        btn12.style.backgroundColor="white";
-        btn12.style.color="#666";
-        btn14.style.backgroundColor="white";
-        btn14.style.color="#666";
-        btn15.style.backgroundColor="white";
-    btn15.style.color="#666";}
-}
-btn14.onclick=function (e){
-        if(e.target.id=="btn14"){btn14.style.backgroundColor="#666";
-        btn14.style.color="white";
-        
-        btn11.style.backgroundColor="white";
-        btn11.style.color="#666";
-        btn13.style.backgroundColor="white";
-        btn13.style.color="#666";
-        btn12.style.backgroundColor="white";
-        btn12.style.color="#666";
-        btn15.style.backgroundColor="white";
-    btn15.style.color="#666";}
-}
-btn15.onclick=function (e){
-        if(e.target.id=="btn15"){btn15.style.backgroundColor="#666";
-        btn15.style.color="white";
-        
-        btn11.style.backgroundColor="white";
-        btn11.style.color="#666";
-        btn13.style.backgroundColor="white";
-        btn13.style.color="#666";
-        btn14.style.backgroundColor="white";
-        btn14.style.color="#666";
-        btn12.style.backgroundColor="white";
-    btn12.style.color="#666";}
-        
-        
-    }
-        
+    <div id="qptmxm2">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "문학", size: 50 },
+            headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+        })
+            .done(function (msg) {
+                var boxs = document.getElementsByClassName("box2");
+                for (var i = 0; i < boxs.length; i++) {
+                    $(".box2").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                    $(".box2").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                    $(".box2").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    $(".box2").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                }
+            });
+    </script>
+
+
+    <div class="qp3">오디오북 BEST</div>
+
+    <div id="qptmxm3">
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+    </div>
+
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "오디오 북", size: 50 },
+            headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+        })
+            .done(function (msg) {
+                var boxs = document.getElementsByClassName("box3");
+                for (var i = 0; i < boxs.length; i++) {
+                    $(".box3").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                    $(".box3").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                    $(".box3").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    $(".box3").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                }
+            });
+    </script>
+
+
+    <div class="qp4">밀리 독점 오리지널 로맨스</div>
+
+    <div id="qptmxm4">
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+        <div class="box4"></div>
+    </div>
+
+
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "로맨스", size: 50 },
+            headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+        })
+            .done(function (msg) {
+                var boxs = document.getElementsByClassName("box4");
+                for (var i = 0; i < boxs.length; i++) {
+                    $(".box4").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                    $(".box4").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                    $(".box4").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    $(".box4").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                }
+            });
+    </script>
+
+
+    <div id="rhkstla">
+        <p>관심 분야에 있는 책도<br>
+            딱 골라드려요</p><br>
+        <p>검색어 순위를 통해 뽑은<br>
+            인기 분야 책들을 확인해보세요</p>
+    </div>
+
+
+    <div id="sihibg">
+        <div class="but">
+            <button type="button" class="btn11" id="btn11">주식</button>
+            <button type="button" class="btn12" id="btn12">영어</button>
+            <button type="button" class="btn13" id="btn13">고전</button>
+            <button type="button" class="btn14" id="btn14">인테리어</button>
+            <button type="button" class="btn15" id="btn15">다이어트</button>
+        </div>
+
+        <script>
+
+            $(document).ready(function () {
+                btn11.style.backgroundColor = "#666";
+                btn11.style.color = "white";
+
+            });
+
+            btn11.onclick = function (e) {
+
+                if (e.target.id == "btn11") {
+                    btn11.style.backgroundColor = "#666";
+                    btn11.style.color = "white";
+
+                    btn12.style.backgroundColor = "white";
+                    btn12.style.color = "#666";
+                    btn13.style.backgroundColor = "white";
+                    btn13.style.color = "#666";
+                    btn14.style.backgroundColor = "white";
+                    btn14.style.color = "#666";
+                    btn15.style.backgroundColor = "white";
+                    btn15.style.color = "#666";
+                }
+
+            }
+
+            btn12.onclick = function (e) {
+
+                if (e.target.id == "btn12") {
+                    btn12.style.backgroundColor = "#666";
+                    btn12.style.color = "white";
+
+                    btn11.style.backgroundColor = "white";
+                    btn11.style.color = "#666";
+                    btn13.style.backgroundColor = "white";
+                    btn13.style.color = "#666";
+                    btn14.style.backgroundColor = "white";
+                    btn14.style.color = "#666";
+                    btn15.style.backgroundColor = "white";
+                    btn15.style.color = "#666";
+                }
+            }
+            btn13.onclick = function (e) {
+                if (e.target.id == "btn13") {
+                    btn13.style.backgroundColor = "#666";
+                    btn13.style.color = "white";
+
+                    btn11.style.backgroundColor = "white";
+                    btn11.style.color = "#666";
+                    btn12.style.backgroundColor = "white";
+                    btn12.style.color = "#666";
+                    btn14.style.backgroundColor = "white";
+                    btn14.style.color = "#666";
+                    btn15.style.backgroundColor = "white";
+                    btn15.style.color = "#666";
+                }
+            }
+            btn14.onclick = function (e) {
+                if (e.target.id == "btn14") {
+                    btn14.style.backgroundColor = "#666";
+                    btn14.style.color = "white";
+
+                    btn11.style.backgroundColor = "white";
+                    btn11.style.color = "#666";
+                    btn13.style.backgroundColor = "white";
+                    btn13.style.color = "#666";
+                    btn12.style.backgroundColor = "white";
+                    btn12.style.color = "#666";
+                    btn15.style.backgroundColor = "white";
+                    btn15.style.color = "#666";
+                }
+            }
+            btn15.onclick = function (e) {
+                if (e.target.id == "btn15") {
+                    btn15.style.backgroundColor = "#666";
+                    btn15.style.color = "white";
+
+                    btn11.style.backgroundColor = "white";
+                    btn11.style.color = "#666";
+                    btn13.style.backgroundColor = "white";
+                    btn13.style.color = "#666";
+                    btn14.style.backgroundColor = "white";
+                    btn14.style.color = "#666";
+                    btn12.style.backgroundColor = "white";
+                    btn12.style.color = "#666";
+                }
+
+
+            }
+
         </script>
 
- 
-    
-<script>
 
-    $(document).ready(function(){
-        $(".sihi1").fadeIn();
-                $(".sihi2").hide();
-                $(".sihi3").hide();
-                $(".sihi4").hide();
-                $(".sihi5").hide();
-    });
-    
-    
-        $(function() {
-            $('button:nth-of-type(1) ').click(function() {
+
+        <script>
+
+            $(document).ready(function () {
                 $(".sihi1").fadeIn();
                 $(".sihi2").hide();
                 $(".sihi3").hide();
                 $(".sihi4").hide();
                 $(".sihi5").hide();
-            
-            });
-    
-    
-            $('button:nth-of-type(2) ').click(function() {
-                $(".sihi2").fadeIn();
-                $(".sihi1").hide();
-                $(".sihi3").hide();
-                $(".sihi4").hide();
-                $(".sihi5").hide();
-            });
-    
-    
-            $('button:nth-of-type(3) ').click(function() {
-                $(".sihi3").fadeIn();
-                $(".sihi1").hide();
-                $(".sihi2").hide();
-                $(".sihi4").hide();
-                $(".sihi5").hide();
-            });
-    
-            $('button:nth-of-type(4) ').click(function() {
-                $(".sihi4").fadeIn();
-                $(".sihi1").hide();
-                $(".sihi2").hide();
-                $(".sihi3").hide();
-                $(".sihi5").hide();
-            });
-    
-            $('button:nth-of-type(5) ').click(function() {
-                $(".sihi5").fadeIn();
-                $(".sihi1").hide();
-                $(".sihi2").hide();
-                $(".sihi3").hide();
-                $(".sihi4").hide();
-            });
-    
-    
-    
-    
-        });
-    </script>
-
-    <div class="sihi1">
-
-    <div class="box5"></div>
-    <div class="box5"></div>
-    <div class="box5"></div>
-    <div class="box5"></div>
-    <div class="box5"></div>
-    <div class="box5"></div>
-    <div class="box5"></div>
-
-    </div>
-
-    <script>
-        $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "주식", size: 50 },
-        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-    })
-        .done(function (msg) {
-            var boxs = document.getElementsByClassName("box5");
-            for (var i = 0; i < boxs.length; i++) {
-                $(".box5").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                $(".box5").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-                $(".box5").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-                $(".box5").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-            }
-        });
-    </script>
-
-    <div class="sihi2">
-
-    <div class="box6"></div>
-    <div class="box6"></div>
-    <div class="box6"></div>
-    <div class="box6"></div>
-    <div class="box6"></div>
-    <div class="box6"></div>
-    <div class="box6"></div>
-
-    </div>
-
-    <script>
-        $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "영어", size: 50 },
-        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-    })
-        .done(function (msg) {
-            var boxs = document.getElementsByClassName("box6");
-            for (var i = 0; i < boxs.length; i++) {
-                $(".box6").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                $(".box6").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-                $(".box6").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-                $(".box6").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-            }
-        });
-    </script>
-
-
-    <div class="sihi3">
-
-        <div class="box7"></div>
-        <div class="box7"></div>
-        <div class="box7"></div>
-        <div class="box7"></div>
-        <div class="box7"></div>
-        <div class="box7"></div>
-        <div class="box7"></div>
-
-    </div>
-
-
-    <script>
-        $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "고전", size: 50 },
-        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-    })
-        .done(function (msg) {
-            var boxs = document.getElementsByClassName("box7");
-            for (var i = 0; i < boxs.length; i++) {
-                $(".box7").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                $(".box7").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-                $(".box7").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-                $(".box7").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-            }
-        });
-    </script>
-
-
-    <div class="sihi4">
-
-        <div class="box8"></div>
-        <div class="box8"></div>
-        <div class="box8"></div>
-        <div class="box8"></div>
-        <div class="box8"></div>
-        <div class="box8"></div>
-        <div class="box8"></div>
-
-    </div>
-
-    <script>
-        $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "인테리어", size: 50 },
-        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-    })
-        .done(function (msg) {
-            var boxs = document.getElementsByClassName("box8");
-            for (var i = 0; i < boxs.length; i++) {
-                $(".box8").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                $(".box8").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-                $(".box8").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-                $(".box8").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-            }
-        });
-    </script>
-
-
-    <div class="sihi5">
-
-        <div class="box9"></div>
-        <div class="box9"></div>
-        <div class="box9"></div>
-        <div class="box9"></div>
-        <div class="box9"></div>
-        <div class="box9"></div>
-        <div class="box9"></div>
-
-    </div>
-
-    <script>
-        $.ajax({
-        method: "GET",
-        url: "https://dapi.kakao.com/v3/search/book?target=title",
-        data: { query: "다이어트", size: 50 },
-        headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-    })
-        .done(function (msg) {
-            var boxs = document.getElementsByClassName("box9");
-            for (var i = 0; i < boxs.length; i++) {
-                $(".box9").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                $(".box9").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-                $(".box9").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
-                $(".box9").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-            }
-        });
-    </script>
-
-
-</div>
-
-<div id="ekdtlsdl">
-
-    <div class="tt">
-        <p>당신이 끝까지 읽을 책을<br>
-        알려주는 완독자 수</p><br>
-        <p>350만 밀리 회원이 먼저 읽고<br>
-            다 읽을 확률과 예상 시간을 알려드려요</p>
-    </div>
-
-    <div class="phon">
-        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-mock.3691c0a919be9925e90a19a17794050e.png" alt="">
-        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-tooltip.af41ece6e348d4b800680256f27a9892.png" alt="">
-
-        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card01.a091cde3f19afee102558704e82eefe6.png" alt="">
-        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card02.f1d517fe9b18dc4a7fcdd58f7f57afbe.png" alt="">
-        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card03.099696781998fdcfbc88f69f81ddd990.png" alt="">
-        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card04.178fde7cba62b12c0e4c5ef28fa01528.png" alt="">
-
-    </div>
-
-</div>
-
-<div id="djswpemsbg">
-
-    <div class="djswpems">
-
-        <div class="dj1">
-            <p>언제든 해지 가능!<br>
-                첫 달 무료로 가볍게</p><br>
-            <p>상황에 맞게 원하는 요금제를<br>
-                자유롭게 선택하세요</p>
-        </div>
-
-        <div class="dj2">
-
-            <div class="dj2_1">
-                <p>전자책 정기구독</p>
-                <p>월 <b>9,900</b>원</p>
-                <p><strike>118,800</strike></p>
-                <p>연 <b>99,900</b>원</p>
-                <p>밀리에서 제공하는 콘텐츠를 무제한으로</p>
-
-                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount.8f423f8b2d39ebc92448a033200683ab.png"
-                    alt="">
-            </div>
-
-            <div class="dj2_2">
-                <p>종이책 정기구독</p>
-                <p>월 <b>15,900</b>원</p>
-                <p><strike>202,800</strike></p>
-                <p>연 <b>183,000</b>원</p>
-                <p>밀리의 모든 콘텐츠를 무제한으로 보고<br>
-                    2달에 1번 종이책+전자책 배송까지</p>
-
-                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount02.1b7dc622a702906821e8c9bf6120c15a.png"
-                    alt="">
-            </div>
-
-
-            <div class="dj2_3">
-
-                <div class="dj2_31">
-                    <img src="img/ticket.png" alt="">
-                    <p>무료 체험 기간 동안 해지해도<br>
-                        금액이 청구되지 않아요</p>
-                </div>
-
-                <div class="dj2_32">
-                    <img src="img/dollar.png" alt="">
-                    <p>유료 결제되어도 사용 이력이<br>
-                        없으면 즉시 환불해드려요</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div id="dkdlvhs">
-
-    <div class="tpro">
-        <ul>
-            <li id="o1" class="o1"><img id="z1" src="img/headphone.png" alt="">
-              오디오북
-            </li>
-            <li id="o2" class="o2"><img id="z2" src="img/phone.png" alt="">
-               밀리 뷰어
-            </li>
-            <li id="o3" class="o3"><img id="z3" src="img/sim.png" alt="">
-              투데이
-            </li>
-        </ul>
-
-    </div>
-
-    <script>
-
-        $(document).ready(function () {
-            $(".dkbg").fadeIn();
-            $(".dkbg2").hide();
-            $(".dkbg3").hide();
-
-
-        });
-
-
-        $(function () {
-            $('.o1 ').click(function () {
-                $(".dkbg").fadeIn();
-                $(".dkbg2").hide();
-                $(".dkbg3").hide();
-
             });
 
 
-            $('.o2').click(function () {
-                $(".dkbg2").fadeIn();
-                $(".dk2_12").fadeIn();
-                $(".dkbg").hide();
-                $(".dkbg3").hide();
-            });
-
-
-            $('.o3 ').click(function () {
-                $(".dkbg3").fadeIn();
-                $(".dk2_13").fadeIn();
-                $(".dkbg2").hide();
-                $(".dkbg").hide();
-            });
-
-        });
-
-
-    </script>
-
-
-
-
-</script>
-
-
-
-<script>
-$(document).ready(function () {
-    o1.style.backgroundColor = "antiquewhite";
-    o1.style.color = "black";
-
-});
-
-o1.onclick = function (e) {
-
-    if (e.target.id == "o1") {
-        o1.style.backgroundColor = "antiquewhite";
-        o1.style.color = "black";
-
-        o2.style.backgroundColor = "#fff";
-        o2.style.color = "black";
-        o3.style.backgroundColor = "#fff";
-        o3.style.color = "black";
-       
-    }}
-
-    o2.onclick = function (e) {
-
-    if (e.target.id == "o2") {
-        o2.style.backgroundColor = "antiquewhite";
-        o2.style.color = "black";
-
-        o1.style.backgroundColor = "#fff";
-        o1.style.color = "black";
-        o3.style.backgroundColor = "#fff";
-        o3.style.color = "black";
-
-    }}
-
-    o3.onclick = function (e) {
-
-    if (e.target.id == "o3") {
-        o3.style.backgroundColor = "antiquewhite";
-        o3.style.color = "black";
-
-        o1.style.backgroundColor = "#fff";
-        o1.style.color = "black";
-        o2.style.backgroundColor = "#fff";
-        o2.style.color = "black";
-       
-        
-    }
-
-  
-
-
-
-}
-
-</script>
-
-
-<script>
-    $(document).ready(function () {
-        o1.style.backgroundColor = "antiquewhite";
-        o1.style.color = "black";
-    
-    });
-    
-    z1.onclick = function (e) {
-    
-        if (e.target.id == "z1") {
-            o1.style.backgroundColor = "antiquewhite";
-            o1.style.color = "black";
-    
-            o2.style.backgroundColor = "#fff";
-            o2.style.color = "black";
-            o3.style.backgroundColor = "#fff";
-            o3.style.color = "black";
-           
-        }}
-    
-        z2.onclick = function (e) {
-    
-        if (e.target.id == "z2") {
-            o2.style.backgroundColor = "antiquewhite";
-            o2.style.color = "black";
-    
-            o1.style.backgroundColor = "#fff";
-            o1.style.color = "black";
-            o3.style.backgroundColor = "#fff";
-            o3.style.color = "black";
-    
-        }}
-    
-        z3.onclick = function (e) {
-    
-        if (e.target.id == "z3") {
-            o3.style.backgroundColor = "antiquewhite";
-            o3.style.color = "black";
-    
-            o1.style.backgroundColor = "#fff";
-            o1.style.color = "black";
-            o2.style.backgroundColor = "#fff";
-            o2.style.color = "black";
-           
-            
-        }
-    
-      
-    
-    
-    
-    }
-    
-    </script>
-
-
-
-    <div class="dkbg">
-
-        <div class="dk1">
-
-            <div class="dk1_1">
-
-                <img src="img/headphone.png" alt="">
-                <p>오디오북</p>
-                <p>세상에서 가장<br>
-                    교양있는 수면제</p>
-
-            </div>
-
-        </div>
-
-        <div class="dk2">
-
-            <div class="dk2_1">
-                <p>하루의 시작과 마무리를 오디오북과 함께</p>
-                <p>지하철에서도, 잠들기 전에도 독서하세요</p><br>
-            </div>
-
-            <div class="dk2_12">
-                <p>귀로 듣다가 눈으로도 같이 보면</p>
-                <p>더 내용이 잘 이해돼요</p><br>
-            </div>
-
-
-            <div class="dk2_13">
-                <p>30분만에 책 요약</p>
-                <p>핵심만 쏙 골라 읽어주는 오디오북</p><br>
-            </div>
-
-            <div class="dk2_14">
-                <p>이제훈부터 옥주현까지</p>
-                <p>셀럽이 읽어주는 오디오북</p><br>
-            </div>
-
-            <div class="dk2_3">
-
-                <ul>
-                    <li class="a1" id="a1">1</li>
-                    <li class="a2" id="a2">2</li>
-                    <li class="a3" id="a3">3 </li>
-                    <li class="a4" id="a4"> 4 </li>
-                </ul>
-
-            </div>
-
-
-            <script>
-
-                $(document).ready(function () {
-                    $(".dk2_1").fadeIn();
-                    $(".dk3 img:nth-of-type(2)").fadeIn();
-                    $(".dk3 img:nth-of-type(3)").hide();
-                    $(".dk3 img:nth-of-type(4)").hide();
-                    $(".dk3 video").hide();
-                    $(".dk2_12").hide();
-                    $(".dk2_13").hide();
-                    $(".dk2_14").hide();
+            $(function () {
+                $('button:nth-of-type(1) ').click(function () {
+                    $(".sihi1").fadeIn();
+                    $(".sihi2").hide();
+                    $(".sihi3").hide();
+                    $(".sihi4").hide();
+                    $(".sihi5").hide();
 
                 });
 
 
-                $(function () {
-                    $('.a1 ').click(function () {
+                $('button:nth-of-type(2) ').click(function () {
+                    $(".sihi2").fadeIn();
+                    $(".sihi1").hide();
+                    $(".sihi3").hide();
+                    $(".sihi4").hide();
+                    $(".sihi5").hide();
+                });
+
+
+                $('button:nth-of-type(3) ').click(function () {
+                    $(".sihi3").fadeIn();
+                    $(".sihi1").hide();
+                    $(".sihi2").hide();
+                    $(".sihi4").hide();
+                    $(".sihi5").hide();
+                });
+
+                $('button:nth-of-type(4) ').click(function () {
+                    $(".sihi4").fadeIn();
+                    $(".sihi1").hide();
+                    $(".sihi2").hide();
+                    $(".sihi3").hide();
+                    $(".sihi5").hide();
+                });
+
+                $('button:nth-of-type(5) ').click(function () {
+                    $(".sihi5").fadeIn();
+                    $(".sihi1").hide();
+                    $(".sihi2").hide();
+                    $(".sihi3").hide();
+                    $(".sihi4").hide();
+                });
+
+
+
+
+            });
+        </script>
+
+        <div class="sihi1">
+
+            <div class="box5"></div>
+            <div class="box5"></div>
+            <div class="box5"></div>
+            <div class="box5"></div>
+            <div class="box5"></div>
+            <div class="box5"></div>
+            <div class="box5"></div>
+
+        </div>
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "주식", size: 50 },
+                headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+            })
+                .done(function (msg) {
+                    var boxs = document.getElementsByClassName("box5");
+                    for (var i = 0; i < boxs.length; i++) {
+                        $(".box5").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                        $(".box5").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".box5").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                        $(".box5").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                    }
+                });
+        </script>
+
+        <div class="sihi2">
+
+            <div class="box6"></div>
+            <div class="box6"></div>
+            <div class="box6"></div>
+            <div class="box6"></div>
+            <div class="box6"></div>
+            <div class="box6"></div>
+            <div class="box6"></div>
+
+        </div>
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "영어", size: 50 },
+                headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+            })
+                .done(function (msg) {
+                    var boxs = document.getElementsByClassName("box6");
+                    for (var i = 0; i < boxs.length; i++) {
+                        $(".box6").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                        $(".box6").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".box6").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                        $(".box6").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                    }
+                });
+        </script>
+
+
+        <div class="sihi3">
+
+            <div class="box7"></div>
+            <div class="box7"></div>
+            <div class="box7"></div>
+            <div class="box7"></div>
+            <div class="box7"></div>
+            <div class="box7"></div>
+            <div class="box7"></div>
+
+        </div>
+
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "고전", size: 50 },
+                headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+            })
+                .done(function (msg) {
+                    var boxs = document.getElementsByClassName("box7");
+                    for (var i = 0; i < boxs.length; i++) {
+                        $(".box7").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                        $(".box7").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".box7").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                        $(".box7").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                    }
+                });
+        </script>
+
+
+        <div class="sihi4">
+
+            <div class="box8"></div>
+            <div class="box8"></div>
+            <div class="box8"></div>
+            <div class="box8"></div>
+            <div class="box8"></div>
+            <div class="box8"></div>
+            <div class="box8"></div>
+
+        </div>
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "인테리어", size: 50 },
+                headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+            })
+                .done(function (msg) {
+                    var boxs = document.getElementsByClassName("box8");
+                    for (var i = 0; i < boxs.length; i++) {
+                        $(".box8").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                        $(".box8").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".box8").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                        $(".box8").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                    }
+                });
+        </script>
+
+
+        <div class="sihi5">
+
+            <div class="box9"></div>
+            <div class="box9"></div>
+            <div class="box9"></div>
+            <div class="box9"></div>
+            <div class="box9"></div>
+            <div class="box9"></div>
+            <div class="box9"></div>
+
+        </div>
+
+        <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "다이어트", size: 50 },
+                headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+            })
+                .done(function (msg) {
+                    var boxs = document.getElementsByClassName("box9");
+                    for (var i = 0; i < boxs.length; i++) {
+                        $(".box9").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
+                        $(".box9").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".box9").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                        $(".box9").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
+                    }
+                });
+        </script>
+
+
+    </div>
+
+    <div id="ekdtlsdl">
+
+        <div class="tt">
+            <p>당신이 끝까지 읽을 책을<br>
+                알려주는 완독자 수</p><br>
+            <p>350만 밀리 회원이 먼저 읽고<br>
+                다 읽을 확률과 예상 시간을 알려드려요</p>
+        </div>
+
+        <div class="phon">
+            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-mock.3691c0a919be9925e90a19a17794050e.png"
+                alt="">
+            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-tooltip.af41ece6e348d4b800680256f27a9892.png"
+                alt="">
+
+            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card01.a091cde3f19afee102558704e82eefe6.png"
+                alt="">
+            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card02.f1d517fe9b18dc4a7fcdd58f7f57afbe.png"
+                alt="">
+            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card03.099696781998fdcfbc88f69f81ddd990.png"
+                alt="">
+            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/reading-card04.178fde7cba62b12c0e4c5ef28fa01528.png"
+                alt="">
+
+        </div>
+
+    </div>
+
+    <div id="djswpemsbg">
+
+        <div class="djswpems">
+
+            <div class="dj1">
+                <p>언제든 해지 가능!<br>
+                    첫 달 무료로 가볍게</p><br>
+                <p>상황에 맞게 원하는 요금제를<br>
+                    자유롭게 선택하세요</p>
+            </div>
+
+            <div class="dj2">
+
+                <div class="dj2_1">
+                    <p>전자책 정기구독</p>
+                    <p>월 <b>9,900</b>원</p>
+                    <p><strike>118,800</strike></p>
+                    <p>연 <b>99,900</b>원</p>
+                    <p>밀리에서 제공하는 콘텐츠를 무제한으로</p>
+
+                    <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount.8f423f8b2d39ebc92448a033200683ab.png"
+                        alt="">
+                </div>
+
+                <div class="dj2_2">
+                    <p>종이책 정기구독</p>
+                    <p>월 <b>15,900</b>원</p>
+                    <p><strike>202,800</strike></p>
+                    <p>연 <b>183,000</b>원</p>
+                    <p>밀리의 모든 콘텐츠를 무제한으로 보고<br>
+                        2달에 1번 종이책+전자책 배송까지</p>
+
+                    <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/discount02.1b7dc622a702906821e8c9bf6120c15a.png"
+                        alt="">
+                </div>
+
+
+                <div class="dj2_3">
+
+                    <div class="dj2_31">
+                        <img src="img/ticket.png" alt="">
+                        <p>무료 체험 기간 동안 해지해도<br>
+                            금액이 청구되지 않아요</p>
+                    </div>
+
+                    <div class="dj2_32">
+                        <img src="img/dollar.png" alt="">
+                        <p>유료 결제되어도 사용 이력이<br>
+                            없으면 즉시 환불해드려요</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="dkdlvhs">
+
+        <div class="tpro">
+            <ul>
+                <li id="o1" class="o1"><img id="z1" src="img/headphone.png" alt="">
+                    오디오북
+                </li>
+                <li id="o2" class="o2"><img id="z2" src="img/phone.png" alt="">
+                    밀리 뷰어
+                </li>
+                <li id="o3" class="o3"><img id="z3" src="img/sim.png" alt="">
+                    투데이
+                </li>
+            </ul>
+
+        </div>
+
+        <script>
+
+            $(document).ready(function () {
+                $(".dkbg").fadeIn();
+                $(".dkbg2").hide();
+                $(".dkbg3").hide();
+                $(".dk2_12").hide();
+                $(".dk2_13").hide();
+
+            });
+
+
+            $(function () {
+                $('.o1 ').click(function () {
+                    $(".dkbg").fadeIn();
+                    $(".dkbg2").hide();
+                    $(".dkbg3").hide();
+                    $(".dk2_12").hide();
+                    $(".dk2_13").hide();
+
+                });
+
+
+                $('.o2').click(function () {
+                    $(".dkbg2").fadeIn();
+                    $(".dk2_12").fadeIn();
+                    $(".dkbg").hide();
+                    $(".dkbg3").hide();
+                });
+
+
+                $('.o3 ').click(function () {
+                    $(".dkbg3").fadeIn();
+                    $(".dk2_13").fadeIn();
+                    $(".dkbg2").hide();
+                    $(".dkbg").hide();
+                });
+
+            });
+
+
+        </script>
+
+
+
+
+        </script>
+
+
+
+        <script>
+            $(document).ready(function () {
+                o1.style.backgroundColor = "antiquewhite";
+                o1.style.color = "black";
+
+            });
+
+            o1.onclick = function (e) {
+
+                if (e.target.id == "o1") {
+                    o1.style.backgroundColor = "antiquewhite";
+                    o1.style.color = "black";
+
+                    o2.style.backgroundColor = "#fff";
+                    o2.style.color = "black";
+                    o3.style.backgroundColor = "#fff";
+                    o3.style.color = "black";
+
+                }
+            }
+
+            o2.onclick = function (e) {
+
+                if (e.target.id == "o2") {
+                    o2.style.backgroundColor = "antiquewhite";
+                    o2.style.color = "black";
+
+                    o1.style.backgroundColor = "#fff";
+                    o1.style.color = "black";
+                    o3.style.backgroundColor = "#fff";
+                    o3.style.color = "black";
+
+                }
+            }
+
+            o3.onclick = function (e) {
+
+                if (e.target.id == "o3") {
+                    o3.style.backgroundColor = "antiquewhite";
+                    o3.style.color = "black";
+
+                    o1.style.backgroundColor = "#fff";
+                    o1.style.color = "black";
+                    o2.style.backgroundColor = "#fff";
+                    o2.style.color = "black";
+
+
+                }
+
+
+
+
+
+            }
+
+        </script>
+
+
+        <script>
+            $(document).ready(function () {
+                o1.style.backgroundColor = "antiquewhite";
+                o1.style.color = "black";
+
+            });
+
+            z1.onclick = function (e) {
+
+                if (e.target.id == "z1") {
+                    o1.style.backgroundColor = "antiquewhite";
+                    o1.style.color = "black";
+
+                    o2.style.backgroundColor = "#fff";
+                    o2.style.color = "black";
+                    o3.style.backgroundColor = "#fff";
+                    o3.style.color = "black";
+
+                }
+            }
+
+            z2.onclick = function (e) {
+
+                if (e.target.id == "z2") {
+                    o2.style.backgroundColor = "antiquewhite";
+                    o2.style.color = "black";
+
+                    o1.style.backgroundColor = "#fff";
+                    o1.style.color = "black";
+                    o3.style.backgroundColor = "#fff";
+                    o3.style.color = "black";
+
+                }
+            }
+
+            z3.onclick = function (e) {
+
+                if (e.target.id == "z3") {
+                    o3.style.backgroundColor = "antiquewhite";
+                    o3.style.color = "black";
+
+                    o1.style.backgroundColor = "#fff";
+                    o1.style.color = "black";
+                    o2.style.backgroundColor = "#fff";
+                    o2.style.color = "black";
+
+
+                }
+
+
+
+
+
+            }
+
+        </script>
+
+
+
+        <div class="dkbg">
+
+            <div class="dk1">
+
+                <div class="dk1_1">
+
+                    <img src="img/headphone.png" alt="">
+                    <p>오디오북</p>
+                    <p>세상에서 가장<br>
+                        교양있는 수면제</p>
+
+                </div>
+
+            </div>
+
+            <div class="dk2">
+
+                <div class="dk2_1">
+                    <p>하루의 시작과 마무리를 오디오북과 함께</p>
+                    <p>지하철에서도, 잠들기 전에도 독서하세요</p><br>
+                </div>
+
+                <div class="dk2_12">
+                    <p>귀로 듣다가 눈으로도 같이 보면</p>
+                    <p>더 내용이 잘 이해돼요</p><br>
+                </div>
+
+
+                <div class="dk2_13">
+                    <p>30분만에 책 요약</p>
+                    <p>핵심만 쏙 골라 읽어주는 오디오북</p><br>
+                </div>
+
+                <div class="dk2_14">
+                    <p>이제훈부터 옥주현까지</p>
+                    <p>셀럽이 읽어주는 오디오북</p><br>
+                </div>
+
+                <div class="dk2_3">
+
+                    <ul>
+                        <li class="a1" id="a1">1</li>
+                        <li class="a2" id="a2">2</li>
+                        <li class="a3" id="a3">3 </li>
+                        <li class="a4" id="a4"> 4 </li>
+                    </ul>
+
+                </div>
+
+
+                <script>
+
+                    $(document).ready(function () {
                         $(".dk2_1").fadeIn();
                         $(".dk3 img:nth-of-type(2)").fadeIn();
                         $(".dk3 img:nth-of-type(3)").hide();
@@ -1546,130 +2761,146 @@ o1.onclick = function (e) {
                     });
 
 
-                    $('.a2 ').click(function () {
-                        $(".dk2_12").fadeIn();
-                        $(".dk3 video").fadeIn();
-                        $(".dk3 img:nth-of-type(2)").hide();
-                        $(".dk3 img:nth-of-type(4)").hide();
-                        $(".dk3 img:nth-of-type(3)").hide();
-                        $(".dk2_1").hide();
-                        $(".dk2_13").hide();
-                        $(".dk2_14").hide();
+                    $(function () {
+                        $('.a1 ').click(function () {
+                            $(".dk2_1").fadeIn();
+                            $(".dk3 img:nth-of-type(2)").fadeIn();
+                            $(".dk3 img:nth-of-type(3)").hide();
+                            $(".dk3 img:nth-of-type(4)").hide();
+                            $(".dk3 video").hide();
+                            $(".dk2_12").hide();
+                            $(".dk2_13").hide();
+                            $(".dk2_14").hide();
+
+                        });
+
+
+                        $('.a2 ').click(function () {
+                            $(".dk2_12").fadeIn();
+                            $(".dk3 video").fadeIn();
+                            $(".dk3 img:nth-of-type(2)").hide();
+                            $(".dk3 img:nth-of-type(4)").hide();
+                            $(".dk3 img:nth-of-type(3)").hide();
+                            $(".dk2_1").hide();
+                            $(".dk2_13").hide();
+                            $(".dk2_14").hide();
+                        });
+
+
+                        $('.a3 ').click(function () {
+                            $(".dk2_13").fadeIn();
+                            $(".dk3 img:nth-of-type(3)").fadeIn();
+                            $(".dk3 img:nth-of-type(4)").hide();
+                            $(".dk3 img:nth-of-type(2)").hide();
+                            $(".dk3 video").hide();
+                            $(".dk2_1").hide();
+                            $(".dk2_12").hide();
+                            $(".dk2_14").hide();
+                        });
+
+                        $('.a4 ').click(function () {
+                            $(".dk2_14").fadeIn();
+                            $(".dk3 img:nth-of-type(4)").fadeIn();
+                            $(".dk3 img:nth-of-type(3)").hide();
+                            $(".dk3 img:nth-of-type(2)").hide();
+                            $(".dk3 video").hide();
+                            $(".dk2_1").hide();
+                            $(".dk2_12").hide();
+                            $(".dk2_13").hide();
+                        });
+
+
                     });
+                </script>
 
+                <script>
 
-                    $('.a3 ').click(function () {
-                        $(".dk2_13").fadeIn();
-                        $(".dk3 img:nth-of-type(3)").fadeIn();
-                        $(".dk3 img:nth-of-type(4)").hide();
-                        $(".dk3 img:nth-of-type(2)").hide();
-                        $(".dk3 video").hide();
-                        $(".dk2_1").hide();
-                        $(".dk2_12").hide();
-                        $(".dk2_14").hide();
-                    });
-
-                    $('.a4 ').click(function () {
-                        $(".dk2_14").fadeIn();
-                        $(".dk3 img:nth-of-type(4)").fadeIn();
-                        $(".dk3 img:nth-of-type(3)").hide();
-                        $(".dk3 img:nth-of-type(2)").hide();
-                        $(".dk3 video").hide();
-                        $(".dk2_1").hide();
-                        $(".dk2_12").hide();
-                        $(".dk2_13").hide();
-                    });
-
-
-                });
-            </script>
-
-            <script>
-
-                $(document).ready(function () {
-                    a1.style.backgroundColor = "#666";
-                    a1.style.color = "white";
-
-                });
-
-                a1.onclick = function (e) {
-
-                    if (e.target.id == "a1") {
+                    $(document).ready(function () {
                         a1.style.backgroundColor = "#666";
-                        a1.style.color = "antiquewhite";
+                        a1.style.color = "white";
 
-                        a2.style.backgroundColor = "antiquewhite";
-                        a2.style.color = "#666";
-                        a3.style.backgroundColor = "antiquewhite";
-                        a3.style.color = "#666";
-                        a4.style.backgroundColor = "antiquewhite";
-                        a4.style.color = "#666";
+                    });
+
+                    a1.onclick = function (e) {
+
+                        if (e.target.id == "a1") {
+                            a1.style.backgroundColor = "#666";
+                            a1.style.color = "antiquewhite";
+
+                            a2.style.backgroundColor = "antiquewhite";
+                            a2.style.color = "#666";
+                            a3.style.backgroundColor = "antiquewhite";
+                            a3.style.color = "#666";
+                            a4.style.backgroundColor = "antiquewhite";
+                            a4.style.color = "#666";
+                        }
                     }
-                }
 
 
-                a2.onclick = function (e) {
-                    if (e.target.id == "a2") {
-                        a2.style.backgroundColor = "#666";
-                        a2.style.color = "antiquewhite";
+                    a2.onclick = function (e) {
+                        if (e.target.id == "a2") {
+                            a2.style.backgroundColor = "#666";
+                            a2.style.color = "antiquewhite";
 
-                        a1.style.backgroundColor = "antiquewhite";
-                        a1.style.color = "#666";
-                        a3.style.backgroundColor = "antiquewhite";
-                        a3.style.color = "#666";
-                        a4.style.backgroundColor = "antiquewhite";
-                        a4.style.color = "#666";
+                            a1.style.backgroundColor = "antiquewhite";
+                            a1.style.color = "#666";
+                            a3.style.backgroundColor = "antiquewhite";
+                            a3.style.color = "#666";
+                            a4.style.backgroundColor = "antiquewhite";
+                            a4.style.color = "#666";
+                        }
                     }
-                }
-                a3.onclick = function (e) {
-                    if (e.target.id == "a3") {
-                        a3.style.backgroundColor = "#666";
-                        a3.style.color = "antiquewhite";
+                    a3.onclick = function (e) {
+                        if (e.target.id == "a3") {
+                            a3.style.backgroundColor = "#666";
+                            a3.style.color = "antiquewhite";
 
-                        a1.style.backgroundColor = "antiquewhite";
-                        a1.style.color = "#666";
-                        a2.style.backgroundColor = "antiquewhite";
-                        a2.style.color = "#666";
-                        a4.style.backgroundColor = "antiquewhite";
-                        a4.style.color = "#666";
+                            a1.style.backgroundColor = "antiquewhite";
+                            a1.style.color = "#666";
+                            a2.style.backgroundColor = "antiquewhite";
+                            a2.style.color = "#666";
+                            a4.style.backgroundColor = "antiquewhite";
+                            a4.style.color = "#666";
+                        }
                     }
-                }
-                a4.onclick = function (e) {
+                    a4.onclick = function (e) {
 
-                    if (e.target.id == "a4") {
-                        a4.style.backgroundColor = "#666";
-                        a4.style.color = "antiquewhite";
+                        if (e.target.id == "a4") {
+                            a4.style.backgroundColor = "#666";
+                            a4.style.color = "antiquewhite";
 
-                        a1.style.backgroundColor = "antiquewhite";
-                        a1.style.color = "#666";
-                        a3.style.backgroundColor = "antiquewhite";
-                        a3.style.color = "#666";
-                        a2.style.backgroundColor = "antiquewhite";
-                        a2.style.color = "#666";
+                            a1.style.backgroundColor = "antiquewhite";
+                            a1.style.color = "#666";
+                            a3.style.backgroundColor = "antiquewhite";
+                            a3.style.color = "#666";
+                            a2.style.backgroundColor = "antiquewhite";
+                            a2.style.color = "#666";
+                        }
                     }
-                }
 
 
 
 
 
-            </script>
+                </script>
+
+            </div>
+
+
+            <div class="dk3">
+                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png"
+                    alt="">
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content04.png?v4" alt="">
+
+                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook2.mp4?v1"
+                    autoplay="autoplay" preload="auto" muted="muted" loop="loop" playsinline></video>
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content01.png?v1" alt="">
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content02.png?v1" alt="">
+            </div>
 
         </div>
 
 
-        <div class="dk3">
-            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png"
-                alt="">
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content04.png?v4" alt="">
-
-            <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook2.mp4?v1" autoplay="autoplay"
-                preload="auto" muted="muted" loop="loop" playsinline></video>
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content01.png?v1" alt="">
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/audiobook-content02.png?v1" alt="">
-        </div>
-
-    </div>
 
 
 
@@ -1703,559 +2934,564 @@ o1.onclick = function (e) {
 
 
 
+        <div class="dkbg2">
 
+            <div class="dk12">
 
-    <div class="dkbg2">
+                <div class="dk1_12">
 
-        <div class="dk12">
+                    <img src="img/phone.png" alt="">
+                    <p>밀리 뷰어</p>
+                    <p>독서를 위한 가장<br>
+                        완벽한 도구</p>
 
-            <div class="dk1_12">
-
-                <img src="img/phone.png" alt="">
-                <p>밀리 뷰어</p>
-                <p>독서를 위한 가장<br>
-                    완벽한 도구</p>
+                </div>
 
             </div>
 
-        </div>
+            <div class="dk22">
 
-        <div class="dk22">
+                <div class="dk2_12">
+                    <p>시선 추적 기능</p>
+                    <p>눈동자로 페이지를 넘길 수 있어요</p><br>
+                </div>
 
-            <div class="dk2_12">
-                <p>시선 추적 기능</p>
-                <p>눈동자로 페이지를 넘길 수 있어요</p><br>
-            </div>
+                <div class="dk2_122">
+                    <p>어느 기기에서도 OK</p>
+                    <p>스마트폰, 태블릿, PC, E ink 기기까지
 
-            <div class="dk2_122">
-                <p>어느 기기에서도 OK</p>
-                <p>스마트폰, 태블릿, PC, E ink 기기까지
-
-                </p><br>
-            </div>
+                    </p><br>
+                </div>
 
 
-            <div class="dk2_132">
-                <p>다크 모드</p>
-                <p>전자책이 눈 아프다는 편견은 버려요</p><br>
-            </div>
+                <div class="dk2_132">
+                    <p>다크 모드</p>
+                    <p>전자책이 눈 아프다는 편견은 버려요</p><br>
+                </div>
 
-            <div class="dk2_142">
-                <p>자유로운 보기 설정</p>
-                <p>줄간격부터 폰트까지 내 마음대로 설정하면<br>
-                    더욱 편한 독서를 할 수 있어요</p><br>
-            </div>
+                <div class="dk2_142">
+                    <p>자유로운 보기 설정</p>
+                    <p>줄간격부터 폰트까지 내 마음대로 설정하면<br>
+                        더욱 편한 독서를 할 수 있어요</p><br>
+                </div>
 
-            <div class="dk2_32">
+                <div class="dk2_32">
 
-                <ul>
-                    <li class="a12" id="a12">1</li>
-                    <li class="a22" id="a22">2</li>
-                    <li class="a32" id="a32">3 </li>
-                    <li class="a42" id="a42"> 4 </li>
-                </ul>
+                    <ul>
+                        <li class="a12" id="a12">1</li>
+                        <li class="a22" id="a22">2</li>
+                        <li class="a32" id="a32">3 </li>
+                        <li class="a42" id="a42"> 4 </li>
+                    </ul>
 
-            </div>
-
-
-            <script>
-
-                // $(document).ready(function () {
-                //     $(".dk2_12").fadeIn();
-                //     $(".dk32 video:nth-of-type(1)").fadeIn();
-                //     $(".dk32 img:nth-of-type(2)").hide();
-                //     $(".dk32 video:nth-of-type(3)").hide();
-                //     $(".dk32 video:nth-of-type(2)").hide();
-                //     $(".dk2_122").hide();
-                //     $(".dk2_132").hide();
-                //     $(".dk2_142").hide();
-
-                // });
+                </div>
 
 
-                $(function () {
-                    $('.a12 ').click(function () {
-                        $(".dk2_12").fadeIn();
+                <script>
 
-                        $(".dk32 video:nth-of-type(1)").fadeIn();
-                        $(".dk32 img:nth-of-type(2)").hide();
-                        $(".dk32 video:nth-of-type(3)").hide();
-                        $(".dk32 video:nth-of-type(2)").hide();
-                        $(".dk2_122").hide();
-                        $(".dk2_132").hide();
-                        $(".dk2_142").hide();
+                    // $(document).ready(function () {
+                    //     $(".dk2_12").fadeIn();
+                    //     $(".dk32 video:nth-of-type(1)").fadeIn();
+                    //     $(".dk32 img:nth-of-type(2)").hide();
+                    //     $(".dk32 video:nth-of-type(3)").hide();
+                    //     $(".dk32 video:nth-of-type(2)").hide();
+                    //     $(".dk2_122").hide();
+                    //     $(".dk2_132").hide();
+                    //     $(".dk2_142").hide();
+
+                    // });
+
+
+                    $(function () {
+                        $('.a12 ').click(function () {
+                            $(".dk2_12").fadeIn();
+
+                            $(".dk32 video:nth-of-type(1)").fadeIn();
+                            $(".dk32 img:nth-of-type(2)").hide();
+                            $(".dk32 video:nth-of-type(3)").hide();
+                            $(".dk32 video:nth-of-type(2)").hide();
+                            $(".dk2_122").hide();
+                            $(".dk2_132").hide();
+                            $(".dk2_142").hide();
+
+                        });
+
+
+                        $('.a22 ').click(function () {
+                            $(".dk2_122").fadeIn();
+                            $(".dk32 img:nth-of-type(2)").fadeIn();
+                            $(".dk32 video:nth-of-type(1)").hide();
+                            $(".dk32 video:nth-of-type(2)").hide();
+                            $(".dk32 video:nth-of-type(3)").hide();
+                            $(".dk2_12").hide();
+                            $(".dk2_132").hide();
+                            $(".dk2_142").hide();
+                        });
+
+
+                        $('.a32 ').click(function () {
+                            $(".dk2_132").fadeIn();
+                            $(".dk32 video:nth-of-type(2)").fadeIn();
+                            $(".dk32 img:nth-of-type(2)").hide();
+                            $(".dk32 video:nth-of-type(3)").hide();
+                            $(".dk32 video:nth-of-type(1)").hide();
+                            $(".dk2_12").hide();
+                            $(".dk2_122").hide();
+                            $(".dk2_142").hide();
+                        });
+
+                        $('.a42 ').click(function () {
+                            $(".dk2_142").fadeIn();
+                            $(".dk32 video:nth-of-type(3)").fadeIn();
+                            $(".dk32 img:nth-of-type(2)").hide();
+                            $(".dk32 video:nth-of-type(1)").hide();
+                            $(".dk32 video:nth-of-type(2)").hide();
+                            $(".dk2_12").hide();
+                            $(".dk2_122").hide();
+                            $(".dk2_132").hide();
+                        });
+
 
                     });
+                </script>
 
+                <script>
 
-                    $('.a22 ').click(function () {
-                        $(".dk2_122").fadeIn();
-                        $(".dk32 img:nth-of-type(2)").fadeIn();
-                        $(".dk32 video:nth-of-type(1)").hide();
-                        $(".dk32 video:nth-of-type(2)").hide();
-                        $(".dk32 video:nth-of-type(3)").hide();
-                        $(".dk2_12").hide();
-                        $(".dk2_132").hide();
-                        $(".dk2_142").hide();
-                    });
-
-
-                    $('.a32 ').click(function () {
-                        $(".dk2_132").fadeIn();
-                        $(".dk32 video:nth-of-type(2)").fadeIn();
-                        $(".dk32 img:nth-of-type(2)").hide();
-                        $(".dk32 video:nth-of-type(3)").hide();
-                        $(".dk32 video:nth-of-type(1)").hide();
-                        $(".dk2_12").hide();
-                        $(".dk2_122").hide();
-                        $(".dk2_142").hide();
-                    });
-
-                    $('.a42 ').click(function () {
-                        $(".dk2_142").fadeIn();
-                        $(".dk32 video:nth-of-type(3)").fadeIn();
-                        $(".dk32 img:nth-of-type(2)").hide();
-                        $(".dk32 video:nth-of-type(1)").hide();
-                        $(".dk32 video:nth-of-type(2)").hide();
-                        $(".dk2_12").hide();
-                        $(".dk2_122").hide();
-                        $(".dk2_132").hide();
-                    });
-
-
-                });
-            </script>
-
-            <script>
-
-                $(document).ready(function () {
-                    a12.style.backgroundColor = "#666";
-                    a12.style.color = "white";
-
-                });
-
-                a12.onclick = function (e) {
-
-                    if (e.target.id == "a12") {
+                    $(document).ready(function () {
                         a12.style.backgroundColor = "#666";
-                        a12.style.color = "antiquewhite";
+                        a12.style.color = "white";
 
-                        a22.style.backgroundColor = "antiquewhite";
-                        a22.style.color = "#666";
-                        a32.style.backgroundColor = "antiquewhite";
-                        a32.style.color = "#666";
-                        a42.style.backgroundColor = "antiquewhite";
-                        a42.style.color = "#666";
+                    });
+
+                    a12.onclick = function (e) {
+
+                        if (e.target.id == "a12") {
+                            a12.style.backgroundColor = "#666";
+                            a12.style.color = "antiquewhite";
+
+                            a22.style.backgroundColor = "antiquewhite";
+                            a22.style.color = "#666";
+                            a32.style.backgroundColor = "antiquewhite";
+                            a32.style.color = "#666";
+                            a42.style.backgroundColor = "antiquewhite";
+                            a42.style.color = "#666";
+                        }
                     }
-                }
 
-                a22.onclick = function (e) {
+                    a22.onclick = function (e) {
 
-                    if (e.target.id == "a22") {
-                        a22.style.backgroundColor = "#666";
-                        a22.style.color = "antiquewhite";
+                        if (e.target.id == "a22") {
+                            a22.style.backgroundColor = "#666";
+                            a22.style.color = "antiquewhite";
 
-                        a12.style.backgroundColor = "antiquewhite";
-                        a12.style.color = "#666";
-                        a32.style.backgroundColor = "antiquewhite";
-                        a32.style.color = "#666";
-                        a42.style.backgroundColor = "antiquewhite";
-                        a42.style.color = "#666";
+                            a12.style.backgroundColor = "antiquewhite";
+                            a12.style.color = "#666";
+                            a32.style.backgroundColor = "antiquewhite";
+                            a32.style.color = "#666";
+                            a42.style.backgroundColor = "antiquewhite";
+                            a42.style.color = "#666";
+                        }
                     }
-                }
 
-                a32.onclick = function (e) {
+                    a32.onclick = function (e) {
 
-                    if (e.target.id == "a32") {
-                        a32.style.backgroundColor = "#666";
-                        a32.style.color = "antiquewhite";
+                        if (e.target.id == "a32") {
+                            a32.style.backgroundColor = "#666";
+                            a32.style.color = "antiquewhite";
 
-                        a12.style.backgroundColor = "antiquewhite";
-                        a12.style.color = "#666";
-                        a22.style.backgroundColor = "antiquewhite";
-                        a22.style.color = "#666";
-                        a42.style.backgroundColor = "antiquewhite";
-                        a42.style.color = "#666";
+                            a12.style.backgroundColor = "antiquewhite";
+                            a12.style.color = "#666";
+                            a22.style.backgroundColor = "antiquewhite";
+                            a22.style.color = "#666";
+                            a42.style.backgroundColor = "antiquewhite";
+                            a42.style.color = "#666";
+                        }
                     }
-                }
 
-                a42.onclick = function (e) {
+                    a42.onclick = function (e) {
 
-                    if (e.target.id == "a42") {
-                        a42.style.backgroundColor = "#666";
-                        a42.style.color = "antiquewhite";
+                        if (e.target.id == "a42") {
+                            a42.style.backgroundColor = "#666";
+                            a42.style.color = "antiquewhite";
 
-                        a12.style.backgroundColor = "antiquewhite";
-                        a12.style.color = "#666";
-                        a32.style.backgroundColor = "antiquewhite";
-                        a32.style.color = "#666";
-                        a22.style.backgroundColor = "antiquewhite";
-                        a22.style.color = "#666";
+                            a12.style.backgroundColor = "antiquewhite";
+                            a12.style.color = "#666";
+                            a32.style.backgroundColor = "antiquewhite";
+                            a32.style.color = "#666";
+                            a22.style.backgroundColor = "antiquewhite";
+                            a22.style.color = "#666";
+                        }
                     }
-                }
 
 
 
 
 
-            </script>
+                </script>
+
+            </div>
+
+
+            <div class="dk32">
+                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png"
+                    alt="">
+                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/sight2.mp4?v1" autoplay="autoplay"
+                    preload="auto" muted="muted" loop="loop" playsinline></video>
+
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer-content01.png?v1" alt="">
+                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/darkmode2.mp4" autoplay="autoplay"
+                    preload="auto" muted="muted" loop="loop" playsinline></video>
+                <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer_system2.mp4?v1"
+                    autoplay="autoplay" preload="auto" muted="muted" loop="loop" playsinline></video>
+            </div>
 
         </div>
 
 
-        <div class="dk32">
-            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png"
-                alt="">
-            <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/sight2.mp4?v1" autoplay="autoplay"
-                preload="auto" muted="muted" loop="loop" playsinline></video>
-
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer-content01.png?v1" alt="">
-            <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/darkmode2.mp4" autoplay="autoplay"
-                preload="auto" muted="muted" loop="loop" playsinline></video>
-            <video src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/viewer_system2.mp4?v1"
-                autoplay="autoplay" preload="auto" muted="muted" loop="loop" playsinline></video>
-        </div>
-
-    </div>
 
 
 
 
 
 
+        <div class="dkbg3">
 
+            <div class="dk13">
 
-    <div class="dkbg3">
+                <div class="dk1_13">
 
-        <div class="dk13">
-    
-            <div class="dk1_13">
-    
-                <img src="img/sim.png" alt="">
-                <p>투데이</p>
-                <p>쓱 - 훑어만 봐도<br>
-                    독서 트렌드를 한 눈에</p>
-    
+                    <img src="img/sim.png" alt="">
+                    <p>투데이</p>
+                    <p>쓱 - 훑어만 봐도<br>
+                        독서 트렌드를 한 눈에</p>
+
+                </div>
+
             </div>
-    
-        </div>
-    
-        <div class="dk23">
-    
-            <div class="dk2_13">
-                <p>당신을 위한 추천</p>
-                <p>키워드로 한 눈에 정리한 추천 도서
-    
-                </p><br>
-            </div>
-    
-            <div class="dk2_123">
-                <p>이럴 땐 이런 책</p>
-                <p>내 상황에 딱 맞는 회원들의 추천 책</p><br>
-            </div>
-    
-    
-            <div class="dk2_133">
-                <p>책-잇</p>
-                <p>책을 통해 트렌드와 문해력을 한번에!</p><br>
-            </div>
-    
-            <!-- <div class="dk2_143">
+
+            <div class="dk23">
+
+                <div class="dk2_13">
+                    <p>당신을 위한 추천</p>
+                    <p>키워드로 한 눈에 정리한 추천 도서
+
+                    </p><br>
+                </div>
+
+                <div class="dk2_123">
+                    <p>이럴 땐 이런 책</p>
+                    <p>내 상황에 딱 맞는 회원들의 추천 책</p><br>
+                </div>
+
+
+                <div class="dk2_133">
+                    <p>책-잇</p>
+                    <p>책을 통해 트렌드와 문해력을 한번에!</p><br>
+                </div>
+
+                <!-- <div class="dk2_143">
                 <p>이제훈부터 옥주현까지</p>
                 <p>셀럽이 읽어주는 오디오북</p><br>
             </div> -->
-    
-            <div class="dk2_33">
-    
-                <ul>
-                    <li class="a13" id="a13">1</li>
-                    <li class="a23" id="a23">2</li>
-                    <li class="a33" id="a33">3 </li>
-                    <!-- <li class="a43" id="a43"> 4 </li> -->
-                </ul>
-    
-            </div>
-    
-    
-            <script>
-    
-                $(document).ready(function () {
-                
-                    $(".dk33 img:nth-of-type(1)").fadeIn();
-                    $(".dk33 img:nth-of-type(2)").fadeIn();
-                    $(".dk33 img:nth-of-type(3)").hide();
-                    $(".dk33 img:nth-of-type(4)").hide();
-                    $(".dk2_13").hide();
-                    $(".dk2_123").hide();
-                    $(".dk2_133").hide();
-                    $(".dk2_143").hide();
-    
-                });
-    
-    
-                $(function () {
-                    $('.a13 ').click(function () {
-                        $(".dk2_13").fadeIn();
+
+                <div class="dk2_33">
+
+                    <ul>
+                        <li class="a13" id="a13">1</li>
+                        <li class="a23" id="a23">2</li>
+                        <li class="a33" id="a33">3 </li>
+                        <!-- <li class="a43" id="a43"> 4 </li> -->
+                    </ul>
+
+                </div>
+
+
+                <script>
+
+                    $(document).ready(function () {
+
                         $(".dk33 img:nth-of-type(1)").fadeIn();
                         $(".dk33 img:nth-of-type(2)").fadeIn();
                         $(".dk33 img:nth-of-type(3)").hide();
                         $(".dk33 img:nth-of-type(4)").hide();
-    
+                        $(".dk2_13").hide();
                         $(".dk2_123").hide();
                         $(".dk2_133").hide();
                         $(".dk2_143").hide();
-    
+
                     });
-    
-    
-                    $('.a23 ').click(function () {
-                        $(".dk2_123").fadeIn();
-                        $(".dk33 img:nth-of-type(1)").fadeIn();
-                        $(".dk33 img:nth-of-type(3)").fadeIn();
-                        $(".dk33 img:nth-of-type(4)").hide();
-                        $(".dk33 img:nth-of-type(2)").hide();
-    
-                        $(".dk2_13").hide();
-                        $(".dk2_133").hide();
-                        $(".dk2_143").hide();
+
+
+                    $(function () {
+                        $('.a13 ').click(function () {
+                            $(".dk2_13").fadeIn();
+                            $(".dk33 img:nth-of-type(1)").fadeIn();
+                            $(".dk33 img:nth-of-type(2)").fadeIn();
+                            $(".dk33 img:nth-of-type(3)").hide();
+                            $(".dk33 img:nth-of-type(4)").hide();
+
+                            $(".dk2_123").hide();
+                            $(".dk2_133").hide();
+                            $(".dk2_143").hide();
+
+                        });
+
+
+                        $('.a23 ').click(function () {
+                            $(".dk2_123").fadeIn();
+                            $(".dk33 img:nth-of-type(1)").fadeIn();
+                            $(".dk33 img:nth-of-type(3)").fadeIn();
+                            $(".dk33 img:nth-of-type(4)").hide();
+                            $(".dk33 img:nth-of-type(2)").hide();
+
+                            $(".dk2_13").hide();
+                            $(".dk2_133").hide();
+                            $(".dk2_143").hide();
+                        });
+
+
+                        $('.a33 ').click(function () {
+                            $(".dk2_133").fadeIn();
+                            $(".dk33 img:nth-of-type(1)").fadeIn();
+                            $(".dk33 img:nth-of-type(4)").fadeIn();
+                            $(".dk33 img:nth-of-type(3)").hide();
+                            $(".dk33 img:nth-of-type(2)").hide();
+
+                            $(".dk2_13").hide();
+                            $(".dk2_123").hide();
+                            $(".dk2_143").hide();
+                        });
+
+
+
                     });
-    
-    
-                    $('.a33 ').click(function () {
-                        $(".dk2_133").fadeIn();
-                        $(".dk33 img:nth-of-type(1)").fadeIn();
-                        $(".dk33 img:nth-of-type(4)").fadeIn();
-                        $(".dk33 img:nth-of-type(3)").hide();
-                        $(".dk33 img:nth-of-type(2)").hide();
-    
-                        $(".dk2_13").hide();
-                        $(".dk2_123").hide();
-                        $(".dk2_143").hide();
-                    });
-    
-    
-    
-                });
-            </script>
-    
-            <script>
-    
-                $(document).ready(function () {
-                    a13.style.backgroundColor = "#666";
-                    a13.style.color = "white";
-    
-                });
-    
-                this.onclick = function (e) {
-    
-                    if (e.target.id == "a13") {
+                </script>
+
+                <script>
+
+                    $(document).ready(function () {
                         a13.style.backgroundColor = "#666";
-                        a13.style.color = "antiquewhite";
-    
-                        a23.style.backgroundColor = "antiquewhite";
-                        a23.style.color = "#666";
-                        a33.style.backgroundColor = "antiquewhite";
-                        a33.style.color = "#666";
-                        a43.style.backgroundColor = "antiquewhite";
-                        a43.style.color = "#666";
+                        a13.style.color = "white";
+
+                    });
+
+                    this.onclick = function (e) {
+
+                        if (e.target.id == "a13") {
+                            a13.style.backgroundColor = "#666";
+                            a13.style.color = "antiquewhite";
+
+                            a23.style.backgroundColor = "antiquewhite";
+                            a23.style.color = "#666";
+                            a33.style.backgroundColor = "antiquewhite";
+                            a33.style.color = "#666";
+                            a43.style.backgroundColor = "antiquewhite";
+                            a43.style.color = "#666";
+                        }
+
+                        if (e.target.id == "a23") {
+                            a23.style.backgroundColor = "#666";
+                            a23.style.color = "antiquewhite";
+
+                            a13.style.backgroundColor = "antiquewhite";
+                            a13.style.color = "#666";
+                            a33.style.backgroundColor = "antiquewhite";
+                            a33.style.color = "#666";
+                            a43.style.backgroundColor = "antiquewhite";
+                            a43.style.color = "#666";
+                        }
+
+                        if (e.target.id == "a33") {
+                            a33.style.backgroundColor = "#666";
+                            a33.style.color = "antiquewhite";
+
+                            a13.style.backgroundColor = "antiquewhite";
+                            a13.style.color = "#666";
+                            a23.style.backgroundColor = "antiquewhite";
+                            a23.style.color = "#666";
+                            a43.style.backgroundColor = "antiquewhite";
+                            a43.style.color = "#666";
+                        }
+
+                        if (e.target.id == "a43") {
+                            a43.style.backgroundColor = "#666";
+                            a4.style.color = "antiquewhite";
+
+                            a13.style.backgroundColor = "antiquewhite";
+                            a13.style.color = "#666";
+                            a33.style.backgroundColor = "antiquewhite";
+                            a33.style.color = "#666";
+                            a23.style.backgroundColor = "antiquewhite";
+                            a23.style.color = "#666";
+                        }
+
+
+
                     }
-    
-                    if (e.target.id == "a23") {
-                        a23.style.backgroundColor = "#666";
-                        a23.style.color = "antiquewhite";
-    
-                        a13.style.backgroundColor = "antiquewhite";
-                        a13.style.color = "#666";
-                        a33.style.backgroundColor = "antiquewhite";
-                        a33.style.color = "#666";
-                        a43.style.backgroundColor = "antiquewhite";
-                        a43.style.color = "#666";
-                    }
-    
-                    if (e.target.id == "a33") {
-                        a33.style.backgroundColor = "#666";
-                        a33.style.color = "antiquewhite";
-    
-                        a13.style.backgroundColor = "antiquewhite";
-                        a13.style.color = "#666";
-                        a23.style.backgroundColor = "antiquewhite";
-                        a23.style.color = "#666";
-                        a43.style.backgroundColor = "antiquewhite";
-                        a43.style.color = "#666";
-                    }
-    
-                    if (e.target.id == "a43") {
-                        a43.style.backgroundColor = "#666";
-                        a4.style.color = "antiquewhite";
-    
-                        a13.style.backgroundColor = "antiquewhite";
-                        a13.style.color = "#666";
-                        a33.style.backgroundColor = "antiquewhite";
-                        a33.style.color = "#666";
-                        a23.style.backgroundColor = "antiquewhite";
-                        a23.style.color = "#666";
-                    }
-    
-    
-    
+
+                </script>
+
+            </div>
+
+
+            <div class="dk33">
+                <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png"
+                    alt="">
+
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/today-content01-v2.png?v2" alt="">
+
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/today-content02.png?v1" alt="">
+                <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/today-content04.png" alt="">
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div id="ehddudtkd">
+        <div class="eh"></div>
+
+        <div class="kd1">
+            <iframe width="473" height="841" src="https://www.youtube.com/embed/m_rkxdWkgFI"
+                title="독서와 친해진 방법 알려드림! 배우 하영원님 솔직후기 - 클릭 한 번이면 책을 읽을 수 있으니까! [ 당신의 일상을 1밀리+ ]" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="kd2">
+
+            <p>내돈내산<br>
+                밀리 구독 이야기</p><br>
+            <p>패션 브랜드 대표부터<br>
+                고등학교 교사까지!</p>
+        </div>
+    </div>
+
+
+    <div id="qnabg">
+
+        <h2>자주 묻는 질문</h2>
+
+        <div class="te">
+
+
+            <button class="accordion">안 쓰면 정말 환불해 주나요?</button>
+            <div class="panel">
+                <p>물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요.<br>
+                    <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인]</b> 에서 직접 환불이 가능하며,<br>
+                    해결이 어려운 경우 고객센터로 문의해 주세요.<br>
+                </p>
+            </div>
+
+            <button class="accordion">구독 중 해지 할 수 있나요? 수수료는 없나요?</button>
+            <div class="panel">
+                <p>다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다.<br>
+                    <b>[밀리 > 관리 > 구독관리 > 구독결제 해지]</b> 메뉴를 통해 기간에 상관없이 직접 가능해요.<br>
+                </p>
+            </div>
+
+            <button class="accordion">무료 혜택은 누구나 받을 수 있나요?</button>
+            <div class="panel">
+                <p>네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 제공됩니다.<br>
+                    첫 달 무료 또는 첫 주 무료 중 선택이 가능하며 무료 기간에 따라 가격이 달라집니다.<br>
+                    종이책+전자책 정기구독의 경우 첫 주 무료 혜택만 제공됩니다.<br>
+                    아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아보세요.<br>
+                </p>
+            </div>
+
+            <button class="accordion">어떤 기기에서 사용할 수 있나요?</button>
+            <div class="panel">
+                <p>아리 기기와 버전에서 밀리를 사용할 수 있습니다.<br><br>
+                    - 휴대폰 / 태블릿 : iOS13,Android 6 이상 지원<br>
+                    - PC : Mac Yosemite, Window 10 이상 지원<br>
+                    - E ink : Android 4.4 이상 지원<br>
+                    (크레마 그랑데, 크레마 카르타G, 이노스페이스원 공식 판매 기기, 교보 Sam 7.8 등)<br>
+                </p>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
                 }
-    
-            </script>
-    
-        </div>
-    
-    
-        <div class="dk33">
-            <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/mark.7e290a3598dc6f6b8c8142b66db5f9f9.png"
-                alt="">
-
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/today-content01-v2.png?v2" alt="">
-    
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/today-content02.png?v1" alt="">
-            <img src="https://d3udu241ivsax2.cloudfront.net/common/video/brand/today-content04.png" alt="">
-        </div>
-    
-    </div>
-
-
-
-
-
-
-
-
-</div>
-
-
-<div id="ehddudtkd">
-    <div class="eh"></div>
-
-    <div class="kd1">
-        <iframe width="473" height="841" src="https://www.youtube.com/embed/m_rkxdWkgFI" title="독서와 친해진 방법 알려드림! 배우 하영원님 솔직후기 - 클릭 한 번이면 책을 읽을 수 있으니까! [ 당신의 일상을 1밀리+ ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="kd2">
-
-        <p>내돈내산<br>
-            밀리 구독 이야기</p><br>
-        <p>패션 브랜드 대표부터<br>
-            고등학교 교사까지!</p>
-    </div>
-</div>
-
-
-<div id="qnabg">
-
-    <h2>자주 묻는 질문</h2>
-
-    <div class="te">
-
-
-        <button class="accordion">안 쓰면 정말 환불해 주나요?</button>
-        <div class="panel">
-            <p>물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요.<br>
-                <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인]</b> 에서 직접 환불이 가능하며,<br>
-            해결이 어려운 경우 고객센터로 문의해 주세요.<br></p>
-        </div>
-        
-        <button class="accordion">구독 중 해지 할 수 있나요? 수수료는 없나요?</button>
-        <div class="panel">
-            <p>다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다.<br>
-                <b>[밀리 > 관리 > 구독관리 > 구독결제 해지]</b> 메뉴를 통해 기간에 상관없이 직접 가능해요.<br> </p>
-        </div>
-        
-        <button class="accordion">무료 혜택은 누구나 받을 수 있나요?</button>
-        <div class="panel">
-            <p>네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 제공됩니다.<br>
-                첫 달 무료 또는 첫 주 무료 중 선택이 가능하며 무료 기간에 따라 가격이 달라집니다.<br>
-                종이책+전자책 정기구독의 경우 첫 주 무료 혜택만 제공됩니다.<br>
-                아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아보세요.<br>
-              </p>
-        </div>
-
-        <button class="accordion">어떤 기기에서 사용할 수 있나요?</button>
-        <div class="panel">
-            <p>아리 기기와 버전에서 밀리를 사용할 수 있습니다.<br><br>
-                - 휴대폰 / 태블릿 : iOS13,Android 6 이상 지원<br>
-                - PC : Mac Yosemite, Window 10 이상 지원<br>
-                - E ink : Android 4.4 이상 지원<br>
-                (크레마 그랑데, 크레마 카르타G, 이노스페이스원 공식 판매 기기, 교보 Sam 7.8 등)<br>
-            </p>
-        </div>
-
-
-
-    </div>
-
-
-
-</div>
-
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
-      });
-    }
+            });
+        }
     </script>
 
 
-<footer>
-   <div id="foo">
-    <div class="foo1"><p>(주) 밀리의 서재</p></div>
-    <div class="foo2">
-        <a href="#"><img src="img/youtube.png" alt=""></a>
-        <a href="#"><img src="img/instagram.png" alt=""></a>
-        <a href="#"><img src="img/facebook.png" alt=""></a>
-        <a href="#"><img src="img/kakao.png" alt=""></a>
-        <a href="#"><img src="img/chrome.png" alt=""></a>
-    </div>
-   </div>
+    <footer>
+        <div id="foo">
+            <div class="foo1">
+                <p>(주) 밀리의 서재</p>
+            </div>
+            <div class="foo2">
+                <a href="#"><img src="img/icon_youtube.png" alt=""></a>
+                <a href="#"><img src="img/instagram.png" alt=""></a>
+                <a href="#"><img src="img/facebook.png" alt=""></a>
+                <a href="#"><img src="img/kakao.png" alt=""></a>
+                <a href="#"><img src="img/chrome.png" alt=""></a>
+            </div>
+        </div>
 
-   <button class="accordion2">사업자 정보</button>
-   <div class="panel2">
-     <p><br>대표이사 : 서영택      사업자등록번호 : 423-88-00370 호스팅      제공자 : (주)밀리의 서재<br><br>
-        통신판매업 신고번호 : 2016-서울마포-2012호<br><br>
-        주소 : 서울특별시 마포구 양화로 45, 16층 (메세나폴리스 세아타워)<br><br><br>
-        고객정보보호 책임자 : 김주영(jay@millie.town)<br><br>
-        마케팅 제휴 문의 : business@millie.town<br></p><br><br><br>
-   </div>
+        <button class="accordion2">사업자 정보</button>
+        <div class="panel2">
+            <p><br>대표이사 : 서영택 사업자등록번호 : 423-88-00370 호스팅 제공자 : (주)밀리의 서재<br><br>
+                통신판매업 신고번호 : 2016-서울마포-2012호<br><br>
+                주소 : 서울특별시 마포구 양화로 45, 16층 (메세나폴리스 세아타워)<br><br><br>
+                고객정보보호 책임자 : 김주영(jay@millie.town)<br><br>
+                마케팅 제휴 문의 : business@millie.town<br></p><br><br><br>
+        </div>
 
-   <div class="foo3">
-    <p>이용약관  > <b>개인정보처리방침</b> > 청소년보호정책 > 고객센터 > B2B 문의 > 콘텐츠 제휴문의 > 
-        뷰어 다운로드 > 회사 소개<br></p><br>
-        <p>Copyright © 2022 밀리의 서재 All Rights Reserved.</p><br><br>
-   </div>
-
-
+        <div class="foo3">
+            <p>이용약관 > <b>개인정보처리방침</b> > 청소년보호정책 > 고객센터 > B2B 문의 > 콘텐츠 제휴문의 >
+                뷰어 다운로드 > 회사 소개<br></p><br>
+            <p>Copyright © 2022 밀리의 서재 All Rights Reserved.</p><br><br>
+        </div>
 
 
-</footer>
-    
-<script>
-    var acc = document.getElementsByClassName("accordion2");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active2");
-        var panel2 = this.nextElementSibling;
-        if (panel2.style.maxHeight) {
-          panel2.style.maxHeight = null;
-        } else {
-          panel2.style.maxHeight = panel2.scrollHeight + "px";
-        } 
-      });
-    }
+
+
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion2");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active2");
+                var panel2 = this.nextElementSibling;
+                if (panel2.style.maxHeight) {
+                    panel2.style.maxHeight = null;
+                } else {
+                    panel2.style.maxHeight = panel2.scrollHeight + "px";
+                }
+            });
+        }
     </script>
 
 
@@ -2263,12 +3499,171 @@ o1.onclick = function (e) {
 
 
 
-<script>
+    <script>
 
-</script>
+
+        $(function () {
+
+
+            $(window).ready(function () {
+
+                var ws = $(this).scrollTop();
+
+
+                if (ws > -10) {
+
+                    $('.sl p:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
+                    $('.de').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                }
+
+
+            });
+
+        });
+
+
+
+
+        $(function () {
+            if (window.matchMedia("(min-width: 1200px)").matches) {
+
+                $(window).scroll(function () {
+
+                    var ws = $(this).scrollTop();
+
+
+
+                    if (ws > 250) {
+
+                        $('.an p:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.an p:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
+
+                    }
+
+                    if (ws > 720) {
+
+                        $('#anwpgks').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+                    }
+
+                    if (ws > 1500) {
+
+                        $('.box1').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+
+                    if (ws > 2000) {
+
+                        $('.box2').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+
+                    if (ws > 2500) {
+
+                        $('.box3').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+
+                    if (ws > 2900) {
+
+                        $('#rhkstla').css("transform", "translateY(0px)").css("opacity", "1");
+                        // $('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+                    }
+
+
+                    if (ws > 3000) {
+
+                        $('.box4').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+
+
+
+
+                    if (ws > 3500) {
+
+                        $('.box5').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.box6').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.box7').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.box8').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.box9').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+
+                    if (ws > 4000) {
+
+                        $('.tt').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.phon img:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.phon img:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.phon img:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.phon img:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+                    }
+
+                    if (ws > 4800) {
+
+                        $('.dj1').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+                    if (ws > 6000) {
+
+                        $('.dk1_1').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.dk3').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.dk1_12').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.dk32').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.dk1_13').css("transform", "translateY(0px)").css("opacity", "1");
+                        $('.dk33').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+                    }
+                    if (ws > 7000) {
+
+                        $('.kd2').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+
+                    }
+
+                });
+
+            } else {
+
+                /* 뷰포트 너비가 400 픽셀 미만 */
+
+            }
+        });
+
+
+
+
+
+
+    </script>
 
 
 
 
 </body>
+
 </html>
