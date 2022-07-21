@@ -22,7 +22,29 @@
     font-weight: normal;
     font-style: normal;
 }
-          *{margin: 0 ; padding: 0;     font-family: 'IM_Hyemin-Bold';}
+
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+          *{margin: 0 ; padding: 0; font-family: 'IM_Hyemin-Regular';}
           ul, ol, li {list-style: none;}
           html,body {width: 100%; height: 100%;}
           a {text-decoration: none; color: black;}
@@ -30,7 +52,7 @@
 
 
  header {width: 100%; height: 70px; margin: 0 auto; background-color: #fff; z-index: 50;
-         border-top: 1px solid #666; border-bottom: 1px solid #666; position: fixed;}
+         border: 1px solid #ddd; position: fixed;}
 
  #headbg {width: 100%; height: 100%; margin: 0 auto;}
  .head {width: 70px; height: 100%; float: left; margin: 0 auto;  padding-left: 20px;}
@@ -58,9 +80,11 @@
 .de img {width: 85px; height: 30px; }
  .de p {font-size: 20px; padding-left: 20px;}
 
- #fixbg {width: 100%; height: 70px; margin: 0 auto; display: flex;  position: fixed; z-index: 50;}
- .fix {width: 30%; height: 100%; margin: 0 auto;  background-color: #666; border-radius: 60px;
-     display: flex; box-shadow: 4px 4px 4px #666; }
+ #fixbg {width: 25%; height: 60px; margin: 0 auto; display: flex;  position: fixed; z-index: 50;}
+ .fix {width: 100%; height: 100%; margin: 0 auto;  background-color: #666; border-radius: 60px;
+     display: flex; box-shadow: 4px 4px 4px #666;     position: absolute;
+    bottom: -15px;
+    left: 149%;}
  .fix a {width: 100%; height: 100%; margin: 0 auto; color: #fff; 
          display: flex; justify-content: center; align-items: center; }
  .fix a b {font-weight: bold;}
@@ -68,7 +92,7 @@
  #anfy {width: 100%; height: 250px; margin: 0 auto;}
  .an {width: 1200px; height: 100%; margin: 0 auto; 
     display: flex; flex-direction: column; justify-content: flex-end;}
-.an p:nth-of-type(1) {text-align: center; font-size: 40px;}
+.an p:nth-of-type(1) {text-align: center; font-size: 40px; font-weight: bold;}
 .an p:nth-of-type(2) {text-align: center; font-size: 25px; color: #666;}
 
 #clip {width: 100%; height: 80%; margin: 0 auto;  display: flex;
@@ -173,7 +197,7 @@ display: flex;
 #anwpgks p:nth-of-type(1) { font-size: 50px; font-weight: bold; color: black; }
 #anwpgks p:nth-of-type(2) { font-size: 30px;  color: #666;}
 
-.qp {width: 60%; height: 70px; margin: 0 auto; 
+.qp {width: 60%; height: 70px; margin: 0 auto;     font-weight: bold;
     display: flex; flex-direction: column; justify-content: flex-end;} 
 
 #qptmxm {width: 1200px; height: 350px; margin: 0 auto; text-align: center;
@@ -182,8 +206,10 @@ display: flex;
 .box1 {    width: 100%;
     display: flex; flex-direction: column; justify-content: center; align-items: center;}
 
+    .box1 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
- .qp2 {width: 60%; height: 70px; margin: 0 auto; display: flex;
+
+ .qp2 {width: 60%; height: 70px; margin: 0 auto; display: flex;    font-weight: bold;
     flex-direction: column; justify-content: flex-end;} 
 
 #qptmxm2 {width: 1200px; height: 350px; margin: 0 auto; display: flex;
@@ -191,8 +217,9 @@ display: flex;
 
 .box2 {    width: 100%; text-align: center;
     display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .box2 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
- .qp3 {width: 60%; height: 70px; margin: 0 auto; display: flex;
+ .qp3 {width: 60%; height: 70px; margin: 0 auto; display: flex;    font-weight: bold;
     flex-direction: column; justify-content: flex-end;} 
 
 #qptmxm3 {width: 1200px; height: 350px; margin: 0 auto; display: flex; 
@@ -200,8 +227,9 @@ display: flex;
     
 .box3 {    width: 100%; display: flex;
      flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+     .box3 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
-    .qp4 {width: 60%; height: 70px; margin: 0 auto; display: flex;
+    .qp4 {width: 60%; height: 70px; margin: 0 auto; display: flex;    font-weight: bold;
     flex-direction: column; justify-content: flex-end;} 
 
 #qptmxm4 {width: 1200px; height: 350px; margin: 0 auto; display: flex; 
@@ -209,6 +237,7 @@ display: flex;
     
 .box4 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    .box4 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
 
  #rhkstla { width: 70%; height: 400px; margin: 0 auto; display: flex; flex-direction: column;
@@ -230,6 +259,7 @@ display: flex;
     align-items: center;}
 .box5 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    .box5 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
     .sihi2 {width: 100%; height: 400px; margin: 0 auto; display: none;
         display: flex; justify-content: space-around;
@@ -237,6 +267,7 @@ display: flex;
 }
 .box6 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    .box6 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
     .sihi3 {width: 100%; height: 400px; margin: 0 auto; display: none;
          display: flex; justify-content: space-around;
@@ -245,6 +276,7 @@ display: flex;
 
 .box7 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    .box7 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
     .sihi4 {width: 100%; height: 400px; margin: 0 auto;  display: none;
         display: flex; justify-content: space-around;
@@ -253,6 +285,7 @@ display: flex;
 
 .box8 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    .box8 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
     .sihi5 {width: 100%; height: 400px; margin: 0 auto; display: none;
         display: flex; justify-content: space-around;
@@ -261,13 +294,14 @@ display: flex;
 
 .box9 {    width: 100%; display: flex; 
     flex-direction: column;  justify-content: center; align-items: center; text-align: center;}
+    .box9 img {box-shadow: 5px 5px 5px 2px #ddd;}
 
 
 #ekdtlsdl {width: 100%; height: 90%;  background-color: #f7f7f7;}
 
 .tt {width: 100%; height: 30%; margin: 0 auto; 
     display: flex;  flex-direction: column;  justify-content: center; align-items: center;}
-    .tt p:nth-of-type(1) {text-align: center; font-size: 40px;}
+    .tt p:nth-of-type(1) {text-align: center; font-size: 40px; font-weight: bold;}
 .tt p:nth-of-type(2) {text-align: center; font-size: 20px; color: #666;}
 
 
@@ -290,14 +324,15 @@ display: flex;
 .djswpems {width: 1200px; height: 40%; margin: 0 auto; }
 .dj1 {width: 100%; height: 100%; margin:  0 auto; display: flex; flex-direction: column;
     justify-content: center; align-items: center;}
-.dj1 p:nth-of-type(1) {text-align: center; font-size: 40px;}
+.dj1 p:nth-of-type(1) {text-align: center; font-size: 40px; font-weight: bold;}
 .dj1 p:nth-of-type(2) {text-align: center; font-size: 20px; color: #666;}
 
 .dj2 {width: 100%; height: 60%; margin: 0 auto; display: flex;} 
 
 .dj2_1 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
      border-radius: 20px;   box-shadow: 10px 10px 40px rgb(0 0 0 / 10%); display: flex; 
-     flex-direction: column; justify-content: space-evenly; align-items: flex-start; position: relative;}
+     flex-direction: column; justify-content: space-evenly; align-items: flex-start; 
+     position: relative;}
 
      .dj2_1 img {width: 60px; height: 30px; position: absolute; top: 138px; left: 100px; }  
      .dj2_1 p {padding-left: 20px; font-size: 18px;}
@@ -305,7 +340,8 @@ display: flex;
 
  .dj2_2 {width: 350px; height: 300px; margin: 0 auto; background-color: #f7f7f7;
      border-radius: 20px;   box-shadow: 10px 10px 40px rgb(0 0 0 / 10%); display: flex; 
-     flex-direction: column; justify-content: space-evenly; align-items: flex-start; position: relative;}
+     flex-direction: column; justify-content: space-evenly; align-items: flex-start;
+      position: relative;}
 
      .dj2_2 img { width: 60px; height: 30px; position: absolute; top: 127px; left: 100px;}  
      .dj2_2 p {padding-left: 20px; font-size: 18px;}
@@ -318,13 +354,13 @@ display: flex;
         display: flex; justify-content: space-around;
     align-items: center; border-bottom: 1px solid #fff;}
      .dj2_31 img {width: 80px; height: 80px;}
-     .dj2_31 p {font-size: 16px;}
+     .dj2_31 p {font-size: 16px; font-weight: bold;}
 
      .dj2_32 {width: 100%; height: 50%; margin: 0 auto; 
         display: flex; justify-content: space-around;
     align-items: center;}
      .dj2_32 img {width: 80px; height: 80px;}
-     .dj2_32 p {font-size: 16px;}
+     .dj2_32 p {font-size: 16px; font-weight: bold;}
 
 
     #dkdlvhs {width: 100%; height: 1000px; margin: 0 auto; background-color: antiquewhite;}
@@ -347,7 +383,7 @@ display: flex;
    .dk1_1 {width: 100%; height: 100%; display: flex;     flex-direction: column;
     justify-content: center; align-items: flex-start; padding-left: 115px;}
    .dk1_1 img {width: 30px; height: 30px; padding: 10px;}
-   .dk1_1 p:nth-of-type(1) {font-size: 50px; padding: 10px;}
+   .dk1_1 p:nth-of-type(1) {font-size: 50px; padding: 10px; font-weight: bold;}
    .dk1_1 p:nth-of-type(2) {font-size: 20px; padding: 10px;}
 
    
@@ -410,7 +446,7 @@ display: flex;
    .dk1_12 {width: 100%; height: 100%; display: flex;     flex-direction: column;
     justify-content: center; align-items: flex-start; padding-left: 115px;}
    .dk1_12 img {width: 30px; height: 30px; padding: 10px;}
-   .dk1_12 p:nth-of-type(1) {font-size: 50px; padding: 10px;}
+   .dk1_12 p:nth-of-type(1) {font-size: 50px; padding: 10px;font-weight: bold;}
    .dk1_12 p:nth-of-type(2) {font-size: 20px; padding: 10px;}
 
    
@@ -471,7 +507,7 @@ display: flex;
    .dk1_13 {width: 100%; height: 100%; display: flex;     flex-direction: column;
     justify-content: center; align-items: flex-start; padding-left: 115px;}
    .dk1_13 img {width: 30px; height: 30px; padding: 10px;}
-   .dk1_13 p:nth-of-type(1) {font-size: 50px; padding: 10px;}
+   .dk1_13 p:nth-of-type(1) {font-size: 50px; padding: 10px; font-weight: bold;}
    .dk1_13 p:nth-of-type(2) {font-size: 20px; padding: 10px;}
 
    
@@ -519,11 +555,13 @@ display: flex;
 
 
      #ehddudtkd {width: 100%; height: 500px; position: relative; z-index: 1;
-         background-image: url("img/ehrtj.jpg"); background-position: center; background-size: cover;}
+         background-image: url("img/ehrtj.jpg"); background-position: center; 
+         background-size: cover;}
     .eh {width: 100%; height: 500px ; position: absolute; z-index: 2; 
         background-color: rgb(255, 196, 0); opacity: 0.9;}
     .kd1 {width: 30%; height: 100%; float: left; position: absolute; z-index: 3;  }
-    .kd1 iframe {width: 400px; height: 400px; position: absolute; z-index: 4; top: -40px; left: 500px;}
+    .kd1 iframe {width: 400px; height: 400px;
+         position: absolute; z-index: 4; top: -40px; left: 500px;}
 
     .kd2 {width: 30%; height: 100%; float: right; position: absolute; z-index: 3; right: 10%; 
         display: flex;  flex-direction: column; justify-content: center; align-items: flex-start;
@@ -533,60 +571,115 @@ display: flex;
          .kd2 p:nth-of-type(2) {font-size: 20px; color: #666;}
 
 #qnabg {width: 100%; height: auto; margin: 0 auto;     background: #ffeb60; }
-.te {width: 1200px; height: auto; margin: 0 auto;  background: #ffeb60; }
+#qnabg h2 {font-size: 50px ; text-align: center; padding: 50px;}
+
+.te {width: 1000px; height: auto; margin: 0 auto;  background: #ffeb60; padding-bottom: 50px; }
 
 
-
-
-.collapsible {
-  background-color: #fff;
-  color: black;
+.accordion {
+    background-color: white;
+  color: #444;
   cursor: pointer;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 18px;
-  border-radius: 50px;
-  margin: 10px ;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
+  font-weight: bold;
 }
 
-.active, .collapsible:hover {
-  background-color: #555;
+
+
+.active, .accordion:hover {
+    background-color: white;
+  border-bottom: 1px solid #666;
+  border-width: 30%;
 }
 
-/* .content {
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  
+
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
   padding: 0 18px;
-  display: none;
+  background-color: white;
+  max-height: 0;
   overflow: hidden;
-  background-color: #f1f1f1;
-} */
+  transition: max-height 0.2s ease-out;
+border-radius: 0px 0px 15px 15px;
+margin-top: -10px;
+box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
 
-.content {
-    margin-top: -49px;
-    padding: 55px 35px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    border-radius: 0px 0px 10px 10px;
-    width: 1128px;
-    margin-left: 12px;
 }
 
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
+
+
+.panel p {padding: 30px;}
+
+footer {width: 1000px;  height: 250px; margin: 0 auto; font-size: 12px;}
+#foo {width: 1000px; height: 100px; margin: 0 auto; display: flex;     flex-direction: row;
+    justify-content: space-between; align-items: center;}
+.foo1 {width: 200px; height: 100%; display: flex;     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; font-size: 16px; font-weight: bold; }
+.foo2 {width: 200px; height: 100%; display: flex;     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;}
+.foo2 img {width: 20px; height: 20px;}
+
+.accordion2 {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px 18px 18px 0px;
+  width: 30%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  display: flex;
+}
+
+.active2, .accordion2:hover {
+  background-color: white;
+}
+
+.accordion2:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+.active2:after {
+  content: "\2212";
 }
 
-.te h2 {font-size: 40px; padding: 70px; text-align: center;}
+.panel2 {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
     </style>
 
 
@@ -2053,72 +2146,127 @@ o1.onclick = function (e) {
 
 <div id="qnabg">
 
+    <h2>자주 묻는 질문</h2>
+
     <div class="te">
 
 
-
-        <h2>자주 묻는 질문</h2>
-
-        <!-- <p>A Collapsible:</p>
-        <button type="button" class="collapsible">안 쓰면 정말 환불해 주나요?</button>
-        <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> -->
-        
-      
-        <button type="button" class="collapsible">안 쓰면 정말 환불해 주나요?</button>
-        <div class="content">
-          <p>물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요.<br>
-        [밀리 > 관리 > 구독관리 > 결제 내역 확인] 에서 직접 환불이 가능하며,<br>
-    해결이 어려운 경우 고객센터로 문의해 주세요.<br></p>
-        </div>
-        <button type="button" class="collapsible">구독 중 해지 할 수 있나요? 수수료는 없나요?</button>
-        <div class="content">
-          <p>다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다.<br>
-            [밀리 > 관리 > 구독관리 > 구독결제 해지] 메뉴를 통해 기간에 상관없이 직접 가능해요.<br> </p>
-        </div>
-        <button type="button" class="collapsible">무료 혜택은 누구나 받을 수 있나요?</button>
-        <div class="content">
-          <p>네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 제공됩니다.<br>
-            첫 달 무료 또는 첫 주 무료 중 선택이 가능하며 무료 기간에 따라 가격이 달라집니다.<br>
-            종이책+전자책 정기구독의 경우 첫 주 무료 혜택만 제공됩니다.<br>
-            아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아보세요.<br>
-          </p>
-        </div>
-        <button type="button" class="collapsible">어떤 기기에서 사용할 수 있나요?</button>
-        <div class="content">
-          <p>아리 기기와 버전에서 밀리를 사용할 수 있습니다.<br><br>
-            - 휴대폰 / 태블릿 : iOS13,Android 6 이상 지원<br>
-            - PC : Mac Yosemite, Window 10 이상 지원<br>
-            - E ink : Android 4.4 이상 지원<br>
-            (크레마 그랑데, 크레마 카르타G, 이노스페이스원 공식 판매 기기, 교보 Sam 7.8 등)<br>
-        </p>
+        <button class="accordion">안 쓰면 정말 환불해 주나요?</button>
+        <div class="panel">
+            <p>물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다면 전액 환불해 드리고 있어요.<br>
+                <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인]</b> 에서 직접 환불이 가능하며,<br>
+            해결이 어려운 경우 고객센터로 문의해 주세요.<br></p>
         </div>
         
+        <button class="accordion">구독 중 해지 할 수 있나요? 수수료는 없나요?</button>
+        <div class="panel">
+            <p>다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다.<br>
+                <b>[밀리 > 관리 > 구독관리 > 구독결제 해지]</b> 메뉴를 통해 기간에 상관없이 직접 가능해요.<br> </p>
+        </div>
+        
+        <button class="accordion">무료 혜택은 누구나 받을 수 있나요?</button>
+        <div class="panel">
+            <p>네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 제공됩니다.<br>
+                첫 달 무료 또는 첫 주 무료 중 선택이 가능하며 무료 기간에 따라 가격이 달라집니다.<br>
+                종이책+전자책 정기구독의 경우 첫 주 무료 혜택만 제공됩니다.<br>
+                아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아보세요.<br>
+              </p>
+        </div>
+
+        <button class="accordion">어떤 기기에서 사용할 수 있나요?</button>
+        <div class="panel">
+            <p>아리 기기와 버전에서 밀리를 사용할 수 있습니다.<br><br>
+                - 휴대폰 / 태블릿 : iOS13,Android 6 이상 지원<br>
+                - PC : Mac Yosemite, Window 10 이상 지원<br>
+                - E ink : Android 4.4 이상 지원<br>
+                (크레마 그랑데, 크레마 카르타G, 이노스페이스원 공식 판매 기기, 교보 Sam 7.8 등)<br>
+            </p>
+        </div>
+
+
 
     </div>
 
 
+
 </div>
 
-
 <script>
-    var coll = document.getElementsByClassName("collapsible");
+    var acc = document.getElementsByClassName("accordion");
     var i;
     
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
         } else {
-          content.style.display = "block";
-        }
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
       });
     }
     </script>
+
+
+<footer>
+   <div id="foo">
+    <div class="foo1"><p>(주) 밀리의 서재</p></div>
+    <div class="foo2">
+        <a href="#"><img src="img/youtube.png" alt=""></a>
+        <a href="#"><img src="img/instagram.png" alt=""></a>
+        <a href="#"><img src="img/facebook.png" alt=""></a>
+        <a href="#"><img src="img/kakao.png" alt=""></a>
+        <a href="#"><img src="img/chrome.png" alt=""></a>
+    </div>
+   </div>
+
+   <button class="accordion2">사업자 정보</button>
+   <div class="panel2">
+     <p><br>대표이사 : 서영택      사업자등록번호 : 423-88-00370 호스팅      제공자 : (주)밀리의 서재<br><br>
+        통신판매업 신고번호 : 2016-서울마포-2012호<br><br>
+        주소 : 서울특별시 마포구 양화로 45, 16층 (메세나폴리스 세아타워)<br><br><br>
+        고객정보보호 책임자 : 김주영(jay@millie.town)<br><br>
+        마케팅 제휴 문의 : business@millie.town<br></p><br><br><br>
+   </div>
+
+   <div class="foo3">
+    <p>이용약관  > <b>개인정보처리방침</b> > 청소년보호정책 > 고객센터 > B2B 문의 > 콘텐츠 제휴문의 > 
+        뷰어 다운로드 > 회사 소개<br></p><br>
+        <p>Copyright © 2022 밀리의 서재 All Rights Reserved.</p><br><br>
+   </div>
+
+
+
+
+</footer>
     
+<script>
+    var acc = document.getElementsByClassName("accordion2");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active2");
+        var panel2 = this.nextElementSibling;
+        if (panel2.style.maxHeight) {
+          panel2.style.maxHeight = null;
+        } else {
+          panel2.style.maxHeight = panel2.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+
+
+
+
+
+<script>
+
+</script>
+
 
 
 
