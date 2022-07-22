@@ -142,23 +142,34 @@
     .sls1 {  width: 320px; height: 100px; display: flex;
          flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;}
 
-    .corthro {margin: 0 auto;
-    width: 1200px;
-    height: 600px;
-    border-bottom: 1px solid #666;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;}
+    .corthro {margin: 0 auto; width: 1200px; height: 600px;
+    display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;}
 
-    .co {margin: 0 auto;
-    width: 1200px;
-    height: 600px;
-    border-bottom: 1px solid #666;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;}
+   
+
+    .co {margin: 0 auto; width: 1200px; height: 1000px; border-bottom: 1px solid #666;
+    border-top: 1px solid #666; 
+    display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;}
+
+    .co >  .co1 {width: 1200px; height: 300px; margin: 0 auto; border-bottom: 1px solid #666;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;}
+
+  .co >  .co2 {width: 1200px; height: 400px; margin: 0 auto; border-bottom: 1px solid #666;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;}
+
+  .co >  .co3 {width: 1200px; height: 300px; margin: 0 auto; border-bottom: 1px solid #666;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;}
+
+  .co >  .co4 {width: 1200px; height: 100px; margin: 0 auto; border-bottom: 1px solid #666;
+  display: flex; flex-direction: row; justify-content: flex-start; align-items: center;}
+  .co4_1 {width: 250px; height: 100px; display: flex;     justify-content: space-between;
+    align-items: center;}
+
+  .co4_1 a {width: 70px; height: 50px; display: flex; border: 1px solid red; border-radius: 50px;
+    justify-content: center; align-items: center;}
+
+  .co >  .co5 {width: 1200px; height: 300px; margin: 0 auto; border-bottom: 1px solid #666;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;}
 
 
 
@@ -168,6 +179,99 @@
 
 
 
+
+
+
+
+
+
+
+
+  footer {
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        #foo {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .foo1 {
+            width: 200px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .foo2 {
+            width: 200px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .foo2 img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .foo3 {
+            padding-bottom: 30px;
+        }
+
+        .accordion2 {
+            background-color: white;
+            color: #444;
+            cursor: pointer;
+            padding: 18px 18px 18px 0px;
+            width: 30%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            display: flex;
+        }
+
+        .active2,
+        .accordion2:hover {
+            background-color: white;
+        }
+
+        .accordion2:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active2:after {
+            content: "\2212";
+        }
+
+        .panel2 {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        
     </style>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -325,103 +429,238 @@
 
 
         <div class="corthro">
-       
+        
+        
         </div>
-        <div class="co">
 
+        <div class="co">
+        
+            <div class="co1">
+                <h3>목차</h3>
+                <br>
+                <p>산해진미 도시락</p>
+                <p>제이에스 오브 제이에스</p>
+                <p>삼각김밥의 용도</p>
+                <p>원 플러스 원</p>
+                <p>불편한 편의점</p>
+                <p>네 캔에 만 원</p>
+                <p>폐기 상품이지만 아직 괜찮아</p>
+                <p>ALWAYS</p>
+                <br>
+                <p>감사의 글</p>
+            </div>
+        
+            <div class="co2">
+        
+                <h3>작가 소개</h3>
+                <br>
+                <p><b>작가 : 김호연</b></p>
+                <p>저자 : 김호연</p>
+                <p>2013년 『망원동 브라더스』로 세계문학상 우수상을 수상하며 작품 활동을 시작했다.<br>
+                    장편소설 『망원동 브라더스』(2013) 『연적』(2015) 『고스트라이터즈』(2017) 『파우스터』(2019), 산문집 『매일 쓰고 다시 쓰고 끝까지 씁니다』(2020)를 펴냈다.</p>
+        
+        
+            </div>
+        
+            <div class="co3">
+        
+                <h3>출판사</h3>
+                <br>
+                <p>나무옆의자</p>
+        
+        
+            </div>
+        
+            <div class="co4">
+            
+                <div class="co4_1">
+                    <a href="#">
+                        <p>#만 원</p>
+                    </a>
+                    <a href="#">
+                        <p>#기쁨</p>
+                    </a>
+                    <a href="#">
+                        <p>#편의점</p>
+                    </a>
+                </div>
+            
+            </div>
+        
+        
+            <div class="co5">
+
+                <h3>판매자 정보</h3>
+                <br>
+                <p>상호원스토어㈜</p>
+                <p>대표자이재환</p>
+                <p>이메일books@onestore.co.kr</p>
+                <p>전화번호1600-6573</p>
+                <p>주소경기도 성남시 분당구 판교역로 146번길 20</p>
+                <p>통신판매업신고번호제 2016-성남분당-0175호</p>
+                <br>
+                <p>도서 제공자</p>
+                <p>대표자안병현</p>
+                <p>이메일tstorecs@incross.com</p>
+                <p>전화번호02-3156-3808</p>
+           
+            </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         </div>
-    
-    </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
 
 
 
 
     <script>
 
-        
-        
-                $.ajax({
-        
-                    method: "GET",
-        
-                    url: "https://dapi.kakao.com/v3/search/book?target=title",
-        
-                    data: { query: "불편한 편의점" },
-        
-                    headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
-        
-                })
-        
-        
-        
-                    .done(function (msg) {
-        
-        
-        
-                        console.log(msg.documents[1].title);
-        
-                        console.log(msg.documents[1].thumbnail);
-        
-        
-        
-        
-        
-                        // sub1
-        
-                        $(".corthro").append("<h3>" + msg.documents[0].title + "</h3>");
-        
-                        $(".corthro").append("<img src='" + msg.documents[0].thumbnail + "'/>");
-        
-                        $(".corthro").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
-        
-                        $(".corthro").append(msg.documents[0].price + "원");
-        
-        
-        
-                        var str = msg.documents[0].contents;
-        
-                        var str2 = str.substring(0, 600);
-        
-                        $(".corthro").append("<h3>" + str2 + "</h3>");
-                        $(".corthro").append("<h4>" + str2 + "</h4>");
-                        $(".corthro").append("<h5>" + str2 + "</h5>");
-                        $(".corthro").append("<p>" + str2 + "</p>");
-        
-                        $(".corthro").append("<span>" + "자세히보기" + "</span>");
-        
-                    });
-        
-        
-        
-        
-        
-                //메모장으로 sub 텍스트 가져오기, 서버에 올려야 보임
-        
-        
-        
-                $(function () {
-        
-                    $.get("./sub_text/sub.txt", function (data) {
-        
-                        $(".corthro").html(data);
-        
-        
-        
-                    })
-        
-        
-        
-                });
-        
-        
-        
-       
 
-</script>
+
+        $.ajax({
+
+            method: "GET",
+
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+
+            data: { query: "불편한 편의점" },
+
+            headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
+
+        })
+
+
+
+            .done(function (msg) {
+
+
+
+                console.log(msg.documents[1].title);
+
+                console.log(msg.documents[1].thumbnail);
 
 
 
 
+
+                // sub1
+
+                $(".corthro").append("<h3>" + msg.documents[0].title + "</h3>");
+
+                $(".corthro").append("<img src='" + msg.documents[0].thumbnail + "'/>");
+
+                $(".corthro").append("<h6>" + msg.documents[0].authors[0] + "</h6>");
+
+                $(".corthro").append(msg.documents[0].price + "원");
+
+
+
+                var str = msg.documents[0].contents;
+
+                var str2 = str.substring(0, 600);
+
+                $(".corthro").append("<h3>" + str2 + "</h3>");
+                $(".corthro").append("<h4>" + str2 + "</h4>");
+                $(".corthro").append("<h5>" + str2 + "</h5>");
+                $(".corthro").append("<p>" + str2 + "</p>");
+
+                $(".corthro").append("<span>" + "자세히보기" + "</span>");
+
+            });
+
+
+
+
+
+        //메모장으로 sub 텍스트 가져오기, 서버에 올려야 보임
+
+
+
+        $(function () {
+
+            $.get("./sub_text/sub.txt", function (data) {
+
+                $(".corthro").html(data);
+
+
+
+            })
+
+
+
+        });
+
+
+
+
+
+    </script>
+
+
+<footer>
+    <div id="foo">
+        <div class="foo1">
+            <p>(주) 밀리의 서재</p>
+        </div>
+        <div class="foo2">
+            <a href="#"><img src="img/icon_youtube.png" alt=""></a>
+            <a href="#"><img src="img/instagram.png" alt=""></a>
+            <a href="#"><img src="img/facebook.png" alt=""></a>
+            <a href="#"><img src="img/kakao.png" alt=""></a>
+            <a href="#"><img src="img/chrome.png" alt=""></a>
+        </div>
+    </div>
+
+    <button class="accordion2">사업자 정보</button>
+    <div class="panel2">
+        <p><br>대표이사 : 서영택 사업자등록번호 : 423-88-00370 호스팅 제공자 : (주)밀리의 서재<br><br>
+            통신판매업 신고번호 : 2016-서울마포-2012호<br><br>
+            주소 : 서울특별시 마포구 양화로 45, 16층 (메세나폴리스 세아타워)<br><br><br>
+            고객정보보호 책임자 : 김주영(jay@millie.town)<br><br>
+            마케팅 제휴 문의 : business@millie.town<br></p><br><br><br>
+    </div>
+
+    <div class="foo3">
+        <p>이용약관 > <b>개인정보처리방침</b> > 청소년보호정책 > 고객센터 > B2B 문의 > 콘텐츠 제휴문의 >
+            뷰어 다운로드 > 회사 소개<br></p><br>
+        <p>Copyright © 2022 밀리의 서재 All Rights Reserved.</p><br><br>
+    </div>
+
+
+
+
+</footer>
 
 
 
