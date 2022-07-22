@@ -123,7 +123,7 @@
 
 
 
-    #hid {width: 1200px; height: 1000px; margin: 0 auto; background-color: antiquewhite;}
+    #hid {width: 1200px; height: 2000px; margin: 0 auto; background-color: antiquewhite;}
     .bt {width: 1200px; height: 70px; margin: 0 auto; border-bottom: 1px solid rgb(199, 199, 199); 
         display: flex; }
     .bt button {width: 100px; height: 70px; display: flex;  justify-content: center;
@@ -662,7 +662,22 @@
 
 </footer>
 
+<script>
+    var acc = document.getElementsByClassName("accordion2");
+    var i;
 
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active2");
+            var panel2 = this.nextElementSibling;
+            if (panel2.style.maxHeight) {
+                panel2.style.maxHeight = null;
+            } else {
+                panel2.style.maxHeight = panel2.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 
 
 
