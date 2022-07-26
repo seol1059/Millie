@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Ko">
 
 <head>
     <meta charset="UTF-8">
@@ -104,7 +104,7 @@
             width: 1200px;
             height: 70px;
             margin: 0 auto;
-            border-top: 1px solid rgb(184, 184, 184);
+            /* border-top: 1px solid rgb(184, 184, 184); */
             border-bottom: 1px solid rgb(184, 184, 184);
             display: flex;
         }
@@ -602,7 +602,7 @@
 
         #hid2 {
             width: 1200px;
-            height: 2100px;
+            height: auto;
             margin: 0 auto;
             display: none;
         }
@@ -722,7 +722,7 @@
 
         .efqhem {
             width: 1200px;
-            height: 1500px;
+            height: auto;
         }
 
         .eo1 {
@@ -1669,10 +1669,11 @@
             width: 1200px;
             height: 300px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .fs1 {
+
             width: 200px;
             height: 300px;
             display: flex;
@@ -1951,6 +1952,15 @@
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
+
+  .bt > button {border-bottom: 1px solid #fff;}
+
+
+
+
+
+
+
     </style>
     <script src="https://kit.fontawesome.com/7eaaacde9b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -2003,7 +2013,7 @@
 
 
     <div id="bookk">
-        <img src="img/XL (5).jpg" alt="">
+        <img src="img/XL(5).jpg" alt="">
         <div class="bk1">
             <p>한국소설</p>
             <p>불편한 편의점(40만부 기념 벚꽃 에디션)</p>
@@ -2088,13 +2098,19 @@
 
     <div class="bt">
         <button id="bt1" class="bt1">
-            <p id="p1" class="p1">작품 정보</p>
+            <p id="p1" class="p1">
+                작품 정보
+            </p>
         </button>
         <button id="bt2" class="bt2">
-            <p id="p2" class="p2">댓글 18</p>
+            <p id="p2" class="p2">
+                댓글 18
+            </p>
         </button>
         <button id="bt3" class="bt3">
-            <p id="p3" class="p3">추천</p>
+            <p id="p3" class="p3">
+                추천
+            </p>
         </button>
     </div>
 
@@ -2362,7 +2378,7 @@
                 <form action="/action_page.php">
                     <input type="text" placeholder="댓글을 입력해주세요." name="search">
                     <button type="submit">
-                        <p>등록</p>
+                        등록
                         <!-- <i class="fa fa-search"></i> -->
                     </button>
                 </form>
@@ -2634,7 +2650,7 @@
             <div class="eo9">
                 <div class="qh9">
                     <button class="fjfj">
-                        <p>댓글 더보기 </p> <b>&#8681;</b>
+                        댓글 더보기 <b>&#8681;</b>
                         <!-- <b>	 &#8595;</b> -->
                     </button>
 
@@ -2967,10 +2983,11 @@
             <div class="fssdk1">
                 <div class="fs1"></div>
                 <div class="fs1"></div>
+                <!-- <div class="fs1"></div>
                 <div class="fs1"></div>
                 <div class="fs1"></div>
-                <div class="fs1"></div>
-                <div class="fs1"></div>
+                <div class="fs1"></div> -->
+               
             </div>
 
 
@@ -2979,17 +2996,29 @@
                 $.ajax({
                     method: "GET",
                     url: "https://dapi.kakao.com/v3/search/book?target=title",
-                    data: { query: "김호연", size: 50 },
+                    data: { query: "김호연", size: (50) },
                     headers: { Authorization: "KakaoAK 7cd5cb83a9829a0d2d6a477a2965321d" }
                 })
                     .done(function (msg) {
+                   
                         var boxs = document.getElementsByClassName("fs1");
-                        for (var i = 0; i < boxs.length; i++) {
+                   
+                                            for (var i = 0; i < boxs.length; i++) {
+                                
+                          
                             $(".fs1").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                            $(".fs1").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                            
+
+                            $(".fs1").eq(i).append("<h4>" + msg.documents[i].title.substring(0, 13) + "</h4>");
                             $(".fs1").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+            //                 if (content.length > 30) {
+            //     $(".fs1 h4").eq(i).append("...");
+            // }
                             // $(".fs1").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
-                        }
+
+                                        
+                                    }
+                           
                     });
             </script>
 
@@ -3032,8 +3061,10 @@
                         var boxs = document.getElementsByClassName("fs2");
                         for (var i = 0; i < boxs.length; i++) {
                             $(".fs2").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                            $(".fs2").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                            $(".fs2").eq(i).append("<h4>" + msg.documents[i].title.substring(0, 10) + "</h4>");
                             $(".fs2").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+
+
                             // $(".fs1").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
                         }
                     });
@@ -3068,7 +3099,7 @@
                         var boxs = document.getElementsByClassName("fs3");
                         for (var i = 0; i < boxs.length; i++) {
                             $(".fs3").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'/>");
-                            $(".fs3").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                            $(".fs3").eq(i).append("<h4>" + msg.documents[i].title.substring(0, 13) + "</h4>");
                             $(".fs3").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                             // $(".fs1").eq(i).append("<h5>" + msg.documents[i].publisher + "</h5>");
                         }
